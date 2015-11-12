@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:raul="http://www.armin-haller.com/resources/raul#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xml:lang="en">
+<head>
+	<title>untitled</title>
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.rdfquery.core.min-1.0.js"></script>
+    <script type="text/javascript" src="js/jquery.rdfquery.rdfa.min-1.0.js"></script>
+    <script type="text/javascript" src="js/jquery.rdfquery.rules.min-1.0.js"></script>
+    <script type="text/javascript" src="js/raul.js"></script>
+</head>
+
+<body>
+    <div profile="http://example.org/simple-profile.ttl">
+       <p about="#me" typeof="foaf:Person"
+          rel="relation:spouse" resource="http://www.ivan-herman.net/Eva_Boka"
+          property="foaf:name">Ivan Herman</p>
+    </div>
+ <input type="submit" name="submit" value="Submit" typeof="raul:Button" onclick="parseDom('body')"/>
+ 
+ <table id="result">
+     <tr><td>s</td><td>p</td><td>o</td><tr>
+ </table>
+</body>
+</html>

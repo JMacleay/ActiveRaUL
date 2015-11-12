@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:gr="http://purl.org/goodrelations/v1#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	
+	xmlns:raul="http://purl.org/NET/raul#">
+	
+	<gr:Offering rdf:ID="me">
+		<gr:name>Premium garden Gloves</gr:name>
+		<gr:description>
+			Tough and durable garden gloves.
+		</gr:description>
+		<gr:hasBusinessFunction>http://purl.org/goodrelations/v1#Sell</gr:hasBusinessFunction>		
+		<gr:hasPriceSpecification>
+			<gr:hasCurrencyValue>6.99</gr:hasCurrencyValue>
+			<gr:hasCurrency>AUD</gr:hasCurrency>
+		</gr:hasPriceSpecification>
+	</gr:Offering>
+</rdf:RDF>

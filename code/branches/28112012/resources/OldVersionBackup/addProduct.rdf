@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:gr="http://purl.org/goodrelations/v1#"
+	xmlns:raul="http://purl.org/NET/raul#">
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Page"/>
+	<raul:title>Title</raul:title>
+	<raul:id>maindiv</raul:id>
+	<raul:list>http://raul.deri.ie/forms/addproduct#addProductWidgetContainerList</raul:list>
+</rdf:Description>
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#addProductWidgetContainerList">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+	<rdf:_1 rdf:resource="http://raul.deri.ie/forms/addproduct#addProductContainer"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#addProductContainer">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#WidgetContainer"/>
+	<raul:method>http://raul.deri.ie/forms/addproduct#addproductMethod</raul:method>
+	<raul:id>addProduct</raul:id>
+	<raul:list>http://raul.deri.ie/forms/addproduct#addProductContainerList</raul:list>
+</rdf:Description>
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#addproductMethod">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#CREATEOperation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#addProductContainerList">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+	<rdf:_1 rdf:resource="http://raul.deri.ie/forms/addproduct#product_name0"/>
+	<rdf:_2 rdf:resource="http://raul.deri.ie/forms/addproduct#testCheckBox"/>
+	<rdf:_3 rdf:resource="http://raul.deri.ie/forms/addproduct#product_CB0"/>
+	<rdf:_4 rdf:resource="http://raul.deri.ie/forms/addproduct#product_CB1"/>
+	<rdf:_5 rdf:resource="http://raul.deri.ie/forms/addproduct#testRadio"/>
+	<rdf:_6 rdf:resource="http://raul.deri.ie/forms/addproduct#product_RB0"/>
+	<rdf:_7 rdf:resource="http://raul.deri.ie/forms/addproduct#product_RB1"/>
+	<rdf:_8 rdf:resource="http://raul.deri.ie/forms/addproduct#testList_0"/>
+	<rdf:_9 rdf:resource="http://raul.deri.ie/forms/addproduct#submit0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#product_name0">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"/>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product Name:</raul:label>
+	<raul:id>product_name0</raul:id>
+	<raul:name>product_name0</raul:name>
+	<raul:value>http://raul.deri.ie/forms/addproduct#valueproduct_name0</raul:value>
+</rdf:Description>
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#valueproduct_name0">
+	<rdf:subject>http://raul.deri.ie/forms/addproduct#TestSubject</rdf:subject>
+	<rdf:predicate>rdfs:label</rdf:predicate>
+	<rdf:object>Samsung TV</rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#testCheckBox">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Group"/>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testCheckBox</raul:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#product_CB0">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Checkbox"/>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CB0</raul:label>
+	<raul:id>product_CB0</raul:id>
+	<raul:name>product_CB0</raul:name>
+	<raul:value>http://raul.deri.ie/forms/addproduct#value_CB0</raul:value>
+	<raul:checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</raul:checked>
+</rdf:Description>
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#value_CB0">
+	<rdf:subject>http://raul.deri.ie/forms/addproduct#TestSubject</rdf:subject>
+	<rdf:predicate>rdfs:value</rdf:predicate>
+	<rdf:object rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#product_CB1">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Checkbox"/>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CB1</raul:label>
+	<raul:id>product_CB1</raul:id>
+	<raul:name>product_CB1</raul:name>
+	<raul:value>http://raul.deri.ie/forms/addproduct#value_CB1</raul:value>
+	<raul:checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</raul:checked>
+</rdf:Description>
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#value_CB1">
+	<rdf:subject>http://raul.deri.ie/forms/addproduct#TestSubject</rdf:subject>
+	<rdf:predicate>rdfs:value</rdf:predicate>
+	<rdf:object rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#testRadio">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Group"/>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testRadioButton</raul:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#product_RB0">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Radiobutton"/>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RB0</raul:label>
+	<raul:id>product_RB0</raul:id>
+	<raul:name>product_RB0</raul:name>
+	<raul:value>http://raul.deri.ie/forms/addproduct#value_RB0</raul:value>
+	<raul:checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</raul:checked>
+</rdf:Description>
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#value_RB0">
+	<rdf:subject>http://raul.deri.ie/forms/addproduct#TestSubject</rdf:subject>
+	<rdf:predicate>rdfs:value</rdf:predicate>
+	<rdf:object rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#product_RB1">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Radiobutton"/>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RB1</raul:label>
+	<raul:id>product_RB1</raul:id>
+	<raul:name>product_RB1</raul:name>
+	<raul:value>http://raul.deri.ie/forms/addproduct#value_RB1</raul:value>
+	<raul:checked rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</raul:checked>
+</rdf:Description>
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#value_RB1">
+	<rdf:subject>http://raul.deri.ie/forms/addproduct#TestSubject</rdf:subject>
+	<rdf:predicate>rdfs:value</rdf:predicate>
+	<rdf:object rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#testList_0">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listbox"/>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testList0:</raul:label>
+	<raul:id>testList0</raul:id>
+	<raul:list>http://raul.deri.ie/forms/addproduct#testList_options_0</raul:list>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#testList_options_0">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+	<rdf:_1 rdf:resource="http://raul.deri.ie/forms/addproduct#testOption_0_0"/>
+	<rdf:_2 rdf:resource="http://raul.deri.ie/forms/addproduct#testOption_0_1"/>
+	<rdf:_3 rdf:resource="http://raul.deri.ie/forms/addproduct#testOption_0_2"/>
+	<rdf:_4 rdf:resource="http://raul.deri.ie/forms/addproduct#testOption_0_3"/>
+	<rdf:_5 rdf:resource="http://raul.deri.ie/forms/addproduct#testOption_0_4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#testOption_0_0">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>2011</raul:label>
+	<raul:value>2011</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#testOption_0_1">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>2010</raul:label>
+	<raul:value>2010</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#testOption_0_2">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>2009</raul:label>
+	<raul:value>2009</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#testOption_0_3">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>2008</raul:label>
+	<raul:value>2008</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#testOption_0_4">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>2007</raul:label>
+	<raul:value>2007</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/addproduct#submit0">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Button"/>
+	<raul:command>testCommand()</raul:command>
+	<raul:label>submit0</raul:label>
+	<raul:id>submit0</raul:id>
+	<raul:name>submit0</raul:name>
+	<raul:value>submit0</raul:value>
+</rdf:Description>
+
+</rdf:RDF>
+

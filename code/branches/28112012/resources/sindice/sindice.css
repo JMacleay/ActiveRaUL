@@ -1,0 +1,97 @@
+#notice { 
+  border: 2px solid green; 
+  padding: 1em;
+  margin: 2em 20% 2em 20%;
+  text-align: center;
+  background-color: #f0f0f0; }
+
+div.about {
+  margin: 15px 18% 15px 18%;
+  text-align: justify;
+}
+
+table.logos {
+  border: 0;
+  margin: 4em 30% 4em 30%;
+  text-align: center;
+}
+
+.submit { 
+  padding: 0 1.5em 0 1.5em; 
+  margin: 0 1em 0 1em; 
+  border: 1px solid black;
+  background-color: #efebe7;
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+input.submit { padding-top: 0em; }
+a.submit { padding: .15em 2em .05em 2em }
+img { border: 0px}
+
+.shortbar {
+  border-top:1px solid #C9D7F1;
+  font-size:0pt;
+  height:0pt;
+  color:#000000;
+  margin: 5px 28% 5px 28%;
+}
+
+.longbar {
+  border-top:1px solid #C9D7F1;
+  font-size:0pt;
+  height:0pt;
+  color:#000000;
+  margin: 5px 0 5px 0;
+}
+
+form { margin: 1em 0 1em 0; }
+ol li { margin-top: .3em; }
+
+.basictab{
+  padding: 3px 0;
+/*  margin-left: 28%;
+  margin-right: 28%; */
+  margin-bottom: 1px;
+  border-bottom: 1px solid #C9D7F1;
+  list-style-type: none;
+  text-align: center; /*set to left, center, or right to align the menu as desired*/
+}
+
+.basictab li{
+  display: inline;
+  margin: 0;
+}
+
+.basictab li a {
+  text-decoration: none;
+  padding: 3px 10px;
+  margin-right: 9px;
+  border: none;
+  border-bottom: none;
+  background-color: #dbe3f1;
+  color: #047391;
+  font-size: 60%;
+  font-weight: bold;
+}
+
+.basictab li a:visited {
+  color: #047391;
+}
+
+.basictab li a:hover {
+  color: #022e3b;
+}
+
+.basictab li a:active {
+  color: white;
+}
+
+.basictab li.selected a { /*selected tab effect*/
+  background-color: #047391;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  top: 1px;
+  padding-top: 4px;
+}

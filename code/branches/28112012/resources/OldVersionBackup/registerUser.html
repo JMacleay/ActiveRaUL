@@ -1,0 +1,1521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:raul="http://purl.org/NET/raul#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:time="http://www.w3.org/2006/timezone"> 
+<head>
+	<meta property="raul:title" content="Register User"/>
+	<title>Register User</title>
+    <link rel="stylesheet" href="css/raul.css" />
+    <link type="text/css" rel="Stylesheet" href="css/blackbird.css" />
+    
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.json-2.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery.rdfquery.core.min-1.0.js"></script> 
+    <script type="text/javascript" src="js/jquery.rdfquery.rdfa.min-1.0.js"></script> 
+    <script type="text/javascript" src="js/jquery.rdfquery.rules.min-1.0.js"></script> 
+    <script type="text/javascript" src="js/blackbird.js"></script> 
+    <script type="text/javascript" src="js/raul_post.js"></script> 
+    <script type="text/javascript" src="js/raul_old.js"></script>
+    
+  </head> 
+  <body> 
+    <div id="frame"> 
+      <div id="header"> 
+        <h1> 
+          RaUL
+        </h1> 
+        <h2> 
+          Register User Form Example
+        </h2> 
+      </div> 
+      <div id="nav"> 
+        <ul> 
+          <li> 
+            <a href="index.html"> 
+              Home
+            </a> 
+          </li>
+          <li><a href="widgets.html">Widgets</a></li> 
+          <li> 
+            <a href="demo.html"> 
+              Demo
+            </a> 
+          </li> 
+        </ul> 
+        <input id="logging" type="submit" name="logging" value="logging" /> <input id="show" type="submit" name="show" value="show"  />
+      </div> 
+      <div id="content">
+      <div about="#registeruser" typeof="raul:Page">
+	    <span style="display:none;">
+          <span property="raul:id">content</span>
+	      <span property="raul:list">http://w3c.org.au/raul/service/public/forms/registeruser#registerUserWidgetContainerList</span>
+	    </span>
+	  </div>
+        <ol about="http://w3c.org.au/raul/service/public/forms/registeruser#registerUserWidgetContainerList">
+	      <li rel="rdf:_1" resource="http://w3c.org.au/raul/service/public/forms/registeruser#registerUserContainer"></li>
+        </ol>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#registerUserContainer" typeof="raul:WidgetContainer">
+          <span style="display:none;">
+	        <span property="raul:id">register</span>		
+	        <span property="raul:method">http://w3c.org.au/forms/registration#registerMethod</span>
+	        <span property="raul:list">http://w3c.org.au/raul/service/public/forms/registeruser#registerUserContainerList</span>
+	      </span>
+        </div>
+	
+	<div style="display:none;" about="http://w3c.org.au/forms/registration#registerMethod" typeof="raul:CREATEOperation">
+        </div>
+	
+        <form method="post" action="" id="register">
+        <div>
+          <ol about="http://w3c.org.au/raul/service/public/forms/registeruser#registerUserContainerList">
+	        <li rel="rdf:_1" resource="http://w3c.org.au/raul/service/public/forms/registeruser#person"></li>
+	        <li rel="rdf:_2" resource="http://w3c.org.au/raul/service/public/forms/registeruser#firstname"></li>
+	        <li rel="rdf:_3" resource="http://w3c.org.au/raul/service/public/forms/registeruser#lastname"></li>
+	        <li rel="rdf:_4" resource="http://w3c.org.au/raul/service/public/forms/registeruser#reg_email"></li>
+	        <li rel="rdf:_5" resource="http://w3c.org.au/raul/service/public/forms/registeruser#reg_passwd"></li>
+	        <li rel="rdf:_6" resource="http://w3c.org.au/raul/service/public/forms/registeruser#sex_1"></li>
+	        <li rel="rdf:_7" resource="http://w3c.org.au/raul/service/public/forms/registeruser#sex_2"></li>
+	        <li rel="rdf:_8" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day"></li>
+	        <li rel="rdf:_9" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month"></li>
+	        <li rel="rdf:_10" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year"></li>
+	        <li rel="rdf:_11" resource="http://w3c.org.au/raul/service/public/forms/registeruser#submit"></li>		
+          </ol>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#person" typeof="raul:Textbox">
+          <span class="key" property="raul:label" datatype="xsd:string">FOAF URI:</span> 
+	   <span style="display:none;">
+	     <span property="raul:class">inputtext</span>
+	     <span property="raul:class">value</span>
+	     <span property="raul:id">person</span>
+	     <span property="raul:value">http://w3c.org.au/raul/service/public/forms/registeruser#valueperson</span>
+	   </span>
+        </div>
+        <div style="display:none;" about="http://w3c.org.au/raul/service/public/forms/registeruser#valueperson">
+	   <span property="rdf:subject">http://w3c.org.au/raul/service/public/forms/registeruser#valueperson</span>
+	   <span property="rdf:predicate">foaf:Person</span>
+	   <span property="rdf:object"></span>
+        </div>
+        <input type="text" class="value inputtext" id="person" value="" />
+        
+        <input type="submit" value="update" />
+        
+		<div class="break" about="http://w3c.org.au/raul/service/public/forms/registeruser#firstname" typeof="raul:Textbox">
+          <span class="key" property="raul:label">First Name:</span>
+	      <span style="display:none;">
+		    <span property="raul:class">inputtext</span>
+		    <span property="raul:class">value</span>
+		    <span property="raul:id">firstname</span>
+		    <span property="raul:value">http://w3c.org.au/raul/service/public/forms/registeruser#valuefirstname</span>
+	      </span>
+        </div>
+        <div style="display:none;" about="http://w3c.org.au/raul/service/public/forms/registeruser#valuefirstname">
+	      <span property="rdf:subject">http://w3c.org.au/raul/service/public/forms/registeruser#valuefirstname</span>
+	      <span property="rdf:predicate">foaf:firstName</span>
+	      <span property="rdf:object"></span>
+        </div>
+        <input type="text" class="value inputtext" id="firstname" value="" /> 
+        <br />
+		<div class='break' about="http://w3c.org.au/raul/service/public/forms/registeruser#lastname" typeof="raul:Textbox">
+          <span class='key' property="raul:label">Last Name:</span>
+	      <span style="display:none;">
+		    <span property="raul:class">inputtext</span>
+		    <span property="raul:class">value</span>
+		    <span property="raul:id">lastname</span>
+		    <span property="raul:value">http://w3c.org.au/raul/service/public/forms/registeruser#valuelastname</span>
+	      </span>
+        </div>
+        <div style="display:none;" about="http://w3c.org.au/raul/service/public/forms/registeruser#valuelastname">
+	      <span property="rdf:subject">http://w3c.org.au/raul/service/public/forms/registeruser#valuelastname</span>
+	      <span property="rdf:predicate">foaf:surname</span>
+	      <span property="rdf:object"></span>
+        </div>
+        <input type="text" class="value inputtext" id="lastname" value="" />
+        <br />
+		<div class='break' about="http://w3c.org.au/raul/service/public/forms/registeruser#reg_email" typeof="raul:Textbox">
+          <span class='key' property="raul:label">Your Email:</span>
+	      <span style="display:none;">
+		    <span property="raul:class">inputtext</span>
+		    <span property="raul:class">value</span>
+		    <span property="raul:id">reg_email</span>
+		    <span property="raul:value">http://w3c.org.au/raul/service/public/forms/registeruser#valuereg_email</span>
+	      </span>
+        </div>
+        <div style="display:none;" about="http://w3c.org.au/raul/service/public/forms/registeruser#valuereg_email">
+	      <span property="rdf:subject">http://w3c.org.au/raul/service/public/forms/registeruser#valuereg_email</span>
+	      <span property="rdf:predicate">foaf:sha1</span>
+	      <span property="rdf:object"></span>
+        </div>
+        <input type="text" class=" value inputtext" id="reg_email" value="" />
+        <br /> 
+		<div class='break' about="http://w3c.org.au/raul/service/public/forms/registeruser#reg_passwd" typeof="raul:Textbox">
+          <span class='key' property="raul:label">Password:</span>
+	      <span style="display:none;">
+		    <span property="raul:class">inputtext</span>
+		    <span property="raul:class">value</span>
+		    <span property="raul:id">reg_passwd</span>
+		    <span property="raul:isPassword" content="true"></span> 
+		    <span property="raul:value">http://w3c.org.au/raul/service/public/forms/registeruser#valuereg_passwd</span>
+	      </span>
+        </div>
+        <div style="display:none;" about="http://w3c.org.au/raul/service/public/forms/registeruser#valuereg_passwd">
+	      <span property="rdf:subject">http://w3c.org.au/raul/service/public/forms/registeruser#valuereg_passwd</span>
+	      <span property="rdf:predicate">foaf:sha1</span>
+	      <span property="rdf:object"></span>
+        </div>
+        <input type="text" class="value inputtext" id="reg_passwd" value="" />
+        <br />
+        <br /> 
+	
+        <div class="break" about="http://w3c.org.au/raul/service/public/forms/registeruser#sex" typeof="raul:Group">
+		<span class='key' property="raul:label">Gender:</span>
+	
+	<div about="http://w3c.org.au/raul/service/public/forms/registeruser#sex_1" typeof="raul:Radiobutton"> 
+		<span property="raul:label">Male</span>
+		<span style="display:none;"> 
+			<span property="raul:name">sex</span> 
+			<span property="raul:value">http://w3c.org.au/raul/service/public/forms/registeruser#valuesex1</span> 			
+		</span> 
+	</div>
+	<div style="display:none;" about="http://w3c.org.au/raul/service/public/forms/registeruser#valuesex1">
+	      <span property="rdf:subject">http://w3c.org.au/raul/service/public/forms/registeruser#valuesex1</span>
+	      <span property="rdf:predicate">foaf:gender</span>
+	      <span property="rdf:object">male</span>
+	</div>	
+          <input type="radio" name="sex" value="http://w3c.org.au/raul/service/public/forms/registeruser#valuesex1" /> 
+		
+          <div about="http://w3c.org.au/raul/service/public/forms/registeruser#sex_2" typeof="raul:Radiobutton"> 
+		<span property="raul:label">Female</span> 
+		<span style="display:none;">
+			<span property="raul:name">sex</span> 
+			<span property="raul:value">http://w3c.org.au/raul/service/public/forms/registeruser#valuesex2</span>			
+		</span>
+          </div> 
+	<div style="display:none;" about="http://w3c.org.au/raul/service/public/forms/registeruser#valuesex2">
+	      <span property="rdf:subject">http://w3c.org.au/raul/service/public/forms/registeruser#valuesex2</span>
+	      <span property="rdf:predicate">foaf:gender</span>
+	      <span property="rdf:object">female</span>
+	</div>	  
+          <input type="radio" name="sex" value="http://w3c.org.au/raul/service/public/forms/registeruser#valuesex2" /> 
+	  
+	</div>
+	
+        <br/>
+        <div class='break' about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day" typeof="raul:Listbox"> 
+          <span class='key' property="raul:label">Birthday:</span>
+          <span style="display:none;">
+            <span property="raul:id" content="birthday_day"></span>
+            <span property="raul:name" content="birthday_day"></span>
+            <span property="raul:options">http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_options</span> 
+            <span property="raul:list">http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_options</span>
+	      </span>          
+        </div> 
+        <ol about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_options" typeof="rdf:Seq"> 
+          <li rel="rdf:_1" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_1"></li> 
+          <li rel="rdf:_2" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_2"></li> 
+          <li rel="rdf:_3" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_3"></li> 
+          <li rel="rdf:_4" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_4"></li> 
+          <li rel="rdf:_5" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_5"></li> 
+          <li rel="rdf:_6" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_6"></li> 
+          <li rel="rdf:_7" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_7"></li> 
+          <li rel="rdf:_8" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_8"></li> 
+          <li rel="rdf:_9" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_9"></li> 
+          <li rel="rdf:_10" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_10"></li> 
+          <li rel="rdf:_11" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_11"></li> 
+          <li rel="rdf:_12" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_12"></li> 
+          <li rel="rdf:_13" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_13"></li> 
+          <li rel="rdf:_14" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_14"></li> 
+          <li rel="rdf:_15" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_15"></li> 
+          <li rel="rdf:_16" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_16"></li> 
+          <li rel="rdf:_17" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_17"></li> 
+          <li rel="rdf:_18" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_18"></li> 
+          <li rel="rdf:_19" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_19"></li> 
+          <li rel="rdf:_20" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_20"></li> 
+          <li rel="rdf:_21" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_21"></li> 
+          <li rel="rdf:_22" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_22"></li> 
+          <li rel="rdf:_23" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_23"></li> 
+          <li rel="rdf:_24" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_24"></li> 
+          <li rel="rdf:_25" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_25"></li> 
+          <li rel="rdf:_26" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_26"></li> 
+          <li rel="rdf:_27" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_27"></li> 
+          <li rel="rdf:_28" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_28"></li> 
+          <li rel="rdf:_29" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_29"></li> 
+          <li rel="rdf:_30" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_30"></li> 
+          <li rel="rdf:_31" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_31"></li>
+          <li rel="rdf:_31" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_32"></li> 
+        </ol>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_1" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">Day:</span>
+		    <span property="raul:value">0</span>
+	      </span>
+        </div>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_2" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1</span>
+		    <span property="raul:value">1</span>
+	      </span>
+        </div>              
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_3" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2</span>
+		    <span property="raul:value">2</span>
+	      </span>
+        </div>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_4" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">3</span>
+		    <span property="raul:value">3</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_5" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">4</span>
+		    <span property="raul:value">4</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_6" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">5</span>
+		    <span property="raul:value">5</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_7" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">6</span>
+		    <span property="raul:value">6</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_8" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">7</span>
+		    <span property="raul:value">7</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_9" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">8</span>
+		    <span property="raul:value">8</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_10" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">9</span>
+		    <span property="raul:value">9</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_11" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">10</span>
+		    <span property="raul:value">10</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_12" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">11</span>
+		    <span property="raul:value">11</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_13" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">12</span>
+		    <span property="raul:value">12</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_14" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">13</span>
+		    <span property="raul:value">13</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_15" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">14</span>
+		    <span property="raul:value">14</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_16" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">15</span>
+		    <span property="raul:value">15</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_17" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">16</span>
+		    <span property="raul:value">16</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_18" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">17</span>
+		    <span property="raul:value">17</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_19" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">18</span>
+		    <span property="raul:value">18</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_20" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">19</span>
+		    <span property="raul:value">19</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_21" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">20</span>
+		    <span property="raul:value">20</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_22" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">21</span>
+		    <span property="raul:value">21</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_23" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">22</span>
+		    <span property="raul:value">22</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_24" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">23</span>
+		    <span property="raul:value">23</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_25" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">24</span>
+		    <span property="raul:value">24</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_26" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">25</span>
+		    <span property="raul:value">25</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_27" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">26</span>
+		    <span property="raul:value">26</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_28" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">27</span>
+		    <span property="raul:value">27</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_29" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">28</span>
+		    <span property="raul:value">28</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_30" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">29</span>
+		    <span property="raul:value">29</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_31" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">30</span>
+		    <span property="raul:value">30</span>
+	      </span>
+        </div>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_day_32" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">31</span>
+		    <span property="raul:value">31</span>
+	      </span>
+        </div>
+        <select id="birthday_day" name="birthday_day">
+          <option value="0">Day:</option> 
+          <option value="1">1</option> 
+          <option value="2">2</option> 
+          <option value="3">3</option> 
+          <option value="4">4</option> 
+          <option value="5">5</option> 
+          <option value="6">6</option> 
+          <option value="7">7</option> 
+          <option value="8">8</option> 
+          <option value="9">9</option> 
+          <option value="10">10</option> 
+          <option value="11">11</option> 
+          <option value="12">12</option> 
+          <option value="13">13</option> 
+          <option value="14">14</option> 
+          <option value="15">15</option> 
+          <option value="16">16</option> 
+          <option value="17">17</option> 
+          <option value="18">18</option> 
+          <option value="19">19</option> 
+          <option value="20">20</option> 
+          <option value="21">21</option> 
+          <option value="22">22</option> 
+          <option value="23">23</option> 
+          <option value="24">24</option> 
+          <option value="25">25</option> 
+          <option value="26">26</option> 
+          <option value="27">27</option> 
+          <option value="28">28</option> 
+          <option value="29">29</option> 
+          <option value="30">30</option> 
+          <option value="31">31</option> 
+        </select>
+        <div class='break' about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month" typeof="raul:Listbox"> 
+          <span style="display:none;">
+            <span property="raul:id" content="birthday_month"></span>
+            <span property="raul:name" content="birthday_month"></span>  
+            <span property="raul:value">http://w3c.org.au/raul/service/public/forms/registeruser#valuebirthday_month</span> 
+            <span property="raul:options">http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_options</span> 
+            <span property="raul:list">http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_options</span>
+	      </span>          
+        </div> 
+        <ol about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_options" typeof="rdf:Seq"> 
+          <li rel="rdf:_1" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_1"></li> 
+          <li rel="rdf:_2" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_2"></li> 
+          <li rel="rdf:_3" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_3"></li> 
+          <li rel="rdf:_4" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_4"></li> 
+          <li rel="rdf:_5" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_5"></li> 
+          <li rel="rdf:_6" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_6"></li> 
+          <li rel="rdf:_7" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_7"></li> 
+          <li rel="rdf:_8" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_8"></li> 
+          <li rel="rdf:_9" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_9"></li> 
+          <li rel="rdf:_10" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_10"></li> 
+          <li rel="rdf:_11" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_11"></li> 
+          <li rel="rdf:_12" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_12"></li>
+          <li rel="rdf:_13" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_13"></li>  
+        </ol>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_1" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">Month:</span>
+		    <span property="raul:value">0</span>
+	      </span>
+        </div>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_2" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1</span>
+		    <span property="raul:value">1</span>
+	      </span>
+        </div>              
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_3" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2</span>
+		    <span property="raul:value">2</span>
+	      </span>
+        </div>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_4" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">3</span>
+		    <span property="raul:value">3</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_5" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">4</span>
+		    <span property="raul:value">4</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_6" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">5</span>
+		    <span property="raul:value">5</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_7" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">6</span>
+		    <span property="raul:value">6</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_8" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">7</span>
+		    <span property="raul:value">7</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_9" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">8</span>
+		    <span property="raul:value">8</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_10" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">9</span>
+		    <span property="raul:value">9</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_11" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">10</span>
+		    <span property="raul:value">10</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_12" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">11</span>
+		    <span property="raul:value">11</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_month_13" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">12</span>
+		    <span property="raul:value">12</span>
+	      </span>
+        </div> 
+        <select id="birthday_month" name="birthday_month"> 
+          <option value="0">Month:</option> 
+          <option value="1">1</option> 
+          <option value="2">2</option> 
+          <option value="3">3</option> 
+          <option value="4">4</option> 
+          <option value="5">5</option> 
+          <option value="6">6</option> 
+          <option value="7">7</option> 
+          <option value="8">8</option> 
+          <option value="9">9</option> 
+          <option value="10">10</option> 
+          <option value="11">11</option> 
+          <option value="12">12</option> 
+        </select>
+        <div class='break' about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year" typeof="raul:Listbox"> 
+          <span style="display:none;">
+            <span property="raul:id" content="birthday_year"></span>
+            <span property="raul:name" content="birthday_year"></span>  
+            <span property="raul:value">http://w3c.org.au/raul/service/public/forms/registeruser#valuebirthday_year</span> 
+            <span property="raul:options">http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_options</span> 
+            <span property="raul:list">http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_options</span>
+	      </span>          
+        </div>       
+        <ol about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_options" typeof="rdf:Seq"> 
+          <li rel="rdf:_1" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_1"></li> 
+          <li rel="rdf:_2" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_2"></li> 
+          <li rel="rdf:_3" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_3"></li> 
+          <li rel="rdf:_4" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_4"></li> 
+          <li rel="rdf:_5" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_5"></li> 
+          <li rel="rdf:_6" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_6"></li> 
+          <li rel="rdf:_7" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_7"></li> 
+          <li rel="rdf:_8" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_8"></li> 
+          <li rel="rdf:_9" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_9"></li> 
+          <li rel="rdf:_10" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_10"></li> 
+          <li rel="rdf:_11" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_11"></li> 
+          <li rel="rdf:_12" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_12"></li> 
+          <li rel="rdf:_13" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_13"></li> 
+          <li rel="rdf:_14" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_14"></li> 
+          <li rel="rdf:_15" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_15"></li> 
+          <li rel="rdf:_16" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_16"></li> 
+          <li rel="rdf:_17" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_17"></li> 
+          <li rel="rdf:_18" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_18"></li> 
+          <li rel="rdf:_19" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_19"></li> 
+          <li rel="rdf:_20" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_20"></li> 
+          <li rel="rdf:_21" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_21"></li> 
+          <li rel="rdf:_22" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_22"></li> 
+          <li rel="rdf:_23" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_23"></li> 
+          <li rel="rdf:_24" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_24"></li> 
+          <li rel="rdf:_25" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_25"></li> 
+          <li rel="rdf:_26" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_26"></li> 
+          <li rel="rdf:_27" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_27"></li> 
+          <li rel="rdf:_28" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_28"></li> 
+          <li rel="rdf:_29" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_29"></li> 
+          <li rel="rdf:_30" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_30"></li> 
+          <li rel="rdf:_31" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_31"></li> 
+          <li rel="rdf:_32" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_32"></li> 
+          <li rel="rdf:_33" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_33"></li> 
+          <li rel="rdf:_34" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_34"></li> 
+          <li rel="rdf:_35" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_35"></li> 
+          <li rel="rdf:_36" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_36"></li> 
+          <li rel="rdf:_37" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_37"></li> 
+          <li rel="rdf:_38" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_38"></li> 
+          <li rel="rdf:_39" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_39"></li> 
+          <li rel="rdf:_40" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_40"></li>
+          <li rel="rdf:_41" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_41"></li> 
+          <li rel="rdf:_42" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_42"></li> 
+          <li rel="rdf:_43" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_43"></li> 
+          <li rel="rdf:_44" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_44"></li> 
+          <li rel="rdf:_45" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_45"></li> 
+          <li rel="rdf:_46" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_46"></li> 
+          <li rel="rdf:_47" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_47"></li> 
+          <li rel="rdf:_48" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_48"></li> 
+          <li rel="rdf:_49" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_49"></li> 
+          <li rel="rdf:_50" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_50"></li>
+          <li rel="rdf:_51" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_51"></li> 
+          <li rel="rdf:_52" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_52"></li> 
+          <li rel="rdf:_53" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_53"></li> 
+          <li rel="rdf:_54" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_54"></li> 
+          <li rel="rdf:_55" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_55"></li> 
+          <li rel="rdf:_56" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_56"></li> 
+          <li rel="rdf:_57" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_57"></li> 
+          <li rel="rdf:_58" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_58"></li> 
+          <li rel="rdf:_59" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_59"></li> 
+          <li rel="rdf:_60" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_60"></li>
+          <li rel="rdf:_61" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_61"></li> 
+          <li rel="rdf:_62" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_62"></li> 
+          <li rel="rdf:_63" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_63"></li> 
+          <li rel="rdf:_64" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_64"></li> 
+          <li rel="rdf:_65" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_65"></li> 
+          <li rel="rdf:_66" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_66"></li> 
+          <li rel="rdf:_67" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_67"></li> 
+          <li rel="rdf:_68" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_68"></li> 
+          <li rel="rdf:_69" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_69"></li> 
+          <li rel="rdf:_70" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_70"></li>
+          <li rel="rdf:_71" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_71"></li> 
+          <li rel="rdf:_72" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_72"></li> 
+          <li rel="rdf:_73" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_73"></li> 
+          <li rel="rdf:_74" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_74"></li> 
+          <li rel="rdf:_75" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_75"></li> 
+          <li rel="rdf:_76" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_76"></li> 
+          <li rel="rdf:_77" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_77"></li> 
+          <li rel="rdf:_78" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_78"></li> 
+          <li rel="rdf:_79" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_79"></li> 
+          <li rel="rdf:_80" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_80"></li>
+          <li rel="rdf:_81" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_81"></li> 
+          <li rel="rdf:_82" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_82"></li> 
+          <li rel="rdf:_83" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_83"></li> 
+          <li rel="rdf:_84" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_84"></li> 
+          <li rel="rdf:_85" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_85"></li> 
+          <li rel="rdf:_86" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_86"></li> 
+          <li rel="rdf:_87" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_87"></li> 
+          <li rel="rdf:_88" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_88"></li> 
+          <li rel="rdf:_89" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_89"></li> 
+          <li rel="rdf:_90" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_90"></li>
+          <li rel="rdf:_91" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_91"></li> 
+          <li rel="rdf:_92" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_92"></li> 
+          <li rel="rdf:_93" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_93"></li> 
+          <li rel="rdf:_94" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_94"></li> 
+          <li rel="rdf:_95" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_95"></li> 
+          <li rel="rdf:_96" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_96"></li> 
+          <li rel="rdf:_97" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_97"></li> 
+          <li rel="rdf:_98" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_98"></li> 
+          <li rel="rdf:_99" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_99"></li> 
+          <li rel="rdf:_100" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_100"></li>
+          <li rel="rdf:_101" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_101"></li>
+          <li rel="rdf:_102" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_102"></li>
+          <li rel="rdf:_103" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_103"></li>
+          <li rel="rdf:_104" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_104"></li>
+          <li rel="rdf:_105" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_105"></li>
+          <li rel="rdf:_106" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_106"></li>
+          <li rel="rdf:_107" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_107"></li>
+          <li rel="rdf:_108" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_108"></li>
+          <li rel="rdf:_109" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_109"></li>
+          <li rel="rdf:_110" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_110"></li>
+          <li rel="rdf:_111" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_111"></li>
+          <li rel="rdf:_112" resource="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_112"></li>
+        </ol>
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_1" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">Year:</span>
+		    <span property="raul:value">0</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_2" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2010</span>
+		    <span property="raul:value">2010</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_3" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2009</span>
+		    <span property="raul:value">2009</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_4" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2008</span>
+		    <span property="raul:value">2008</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_5" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2007</span>
+		    <span property="raul:value">2007</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_6" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2006</span>
+		    <span property="raul:value">2006</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_7" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2005</span>
+		    <span property="raul:value">2005</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_8" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2004</span>
+		    <span property="raul:value">2004</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_9" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2003</span>
+		    <span property="raul:value">2003</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_10" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2002</span>
+		    <span property="raul:value">2002</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_11" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2001</span>
+		    <span property="raul:value">2001</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_12" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">2000</span>
+		    <span property="raul:value">2000</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_13" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1999</span>
+		    <span property="raul:value">1999</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_14" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1998</span>
+		    <span property="raul:value">1998</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_15" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1997</span>
+		    <span property="raul:value">1997</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_16" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1996</span>
+		    <span property="raul:value">1996</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_17" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1995</span>
+		    <span property="raul:value">1995</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_18" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1994</span>
+		    <span property="raul:value">1994</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_19" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1993</span>
+		    <span property="raul:value">1993</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_20" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1992</span>
+		    <span property="raul:value">1992</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_21" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1991</span>
+		    <span property="raul:value">1991</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_22" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1990</span>
+		    <span property="raul:value">1990</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_23" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1989</span>
+		    <span property="raul:value">1989</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_24" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1988</span>
+		    <span property="raul:value">1988</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_25" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1987</span>
+		    <span property="raul:value">1987</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_26" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1986</span>
+		    <span property="raul:value">1986</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_27" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1985</span>
+		    <span property="raul:value">1985</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_28" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1984</span>
+		    <span property="raul:value">1984</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_29" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1983</span>
+		    <span property="raul:value">1983</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_30" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1982</span>
+		    <span property="raul:value">1982</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_31" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1981</span>
+		    <span property="raul:value">1981</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_32" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1980</span>
+		    <span property="raul:value">1980</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_33" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1979</span>
+		    <span property="raul:value">1979</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_34" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1978</span>
+		    <span property="raul:value">1978</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_35" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1977</span>
+		    <span property="raul:value">1977</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_36" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1976</span>
+		    <span property="raul:value">1976</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_37" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1975</span>
+		    <span property="raul:value">1975</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_38" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1974</span>
+		    <span property="raul:value">1974</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_39" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1973</span>
+		    <span property="raul:value">1973</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_40" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1972</span>
+		    <span property="raul:value">1972</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_41" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1971</span>
+		    <span property="raul:value">1971</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_42" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1970</span>
+		    <span property="raul:value">1970</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_43" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1969</span>
+		    <span property="raul:value">1969</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_44" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1968</span>
+		    <span property="raul:value">1968</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_45" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1967</span>
+		    <span property="raul:value">1967</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_46" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1966</span>
+		    <span property="raul:value">1966</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_47" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1965</span>
+		    <span property="raul:value">1965</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_48" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1964</span>
+		    <span property="raul:value">1964</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_49" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1963</span>
+		    <span property="raul:value">1963</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_50" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1962</span>
+		    <span property="raul:value">1962</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_51" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1961</span>
+		    <span property="raul:value">1961</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_52" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1960</span>
+		    <span property="raul:value">1960</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_53" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1959</span>
+		    <span property="raul:value">1959</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_54" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1958</span>
+		    <span property="raul:value">1958</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_55" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1957</span>
+		    <span property="raul:value">1957</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_56" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1956</span>
+		    <span property="raul:value">1956</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_57" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1955</span>
+		    <span property="raul:value">1955</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_58" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1954</span>
+		    <span property="raul:value">1954</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_59" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1953</span>
+		    <span property="raul:value">1953</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_60" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1952</span>
+		    <span property="raul:value">1952</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_61" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1951</span>
+		    <span property="raul:value">1951</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_62" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1950</span>
+		    <span property="raul:value">1950</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_63" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1949</span>
+		    <span property="raul:value">1949</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_64" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1948</span>
+		    <span property="raul:value">1948</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_65" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1947</span>
+		    <span property="raul:value">1947</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_66" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1946</span>
+		    <span property="raul:value">1946</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_67" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1945</span>
+		    <span property="raul:value">1945</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_68" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1944</span>
+		    <span property="raul:value">1944</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_69" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1943</span>
+		    <span property="raul:value">1943</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_70" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1942</span>
+		    <span property="raul:value">1942</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_71" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1941</span>
+		    <span property="raul:value">1941</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_72" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1940</span>
+		    <span property="raul:value">1940</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_73" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1939</span>
+		    <span property="raul:value">1939</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_74" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1938</span>
+		    <span property="raul:value">1938</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_75" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1937</span>
+		    <span property="raul:value">1937</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_76" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1936</span>
+		    <span property="raul:value">1936</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_77" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1935</span>
+		    <span property="raul:value">1935</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_78" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1934</span>
+		    <span property="raul:value">1934</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_79" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1933</span>
+		    <span property="raul:value">1933</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_80" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1932</span>
+		    <span property="raul:value">1932</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_81" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1931</span>
+		    <span property="raul:value">1931</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_82" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1930</span>
+		    <span property="raul:value">1930</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_83" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1929</span>
+		    <span property="raul:value">1929</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_84" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1928</span>
+		    <span property="raul:value">1928</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_85" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1927</span>
+		    <span property="raul:value">1927</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_86" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1926</span>
+		    <span property="raul:value">1926</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_87" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1925</span>
+		    <span property="raul:value">1925</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_88" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1924</span>
+		    <span property="raul:value">1924</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_89" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1923</span>
+		    <span property="raul:value">1923</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_90" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1922</span>
+		    <span property="raul:value">1922</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_91" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1921</span>
+		    <span property="raul:value">1921</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_92" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1920</span>
+		    <span property="raul:value">1920</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_93" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1919</span>
+		    <span property="raul:value">1919</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_94" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1918</span>
+		    <span property="raul:value">1918</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_95" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1917</span>
+		    <span property="raul:value">1917</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_96" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1916</span>
+		    <span property="raul:value">1916</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_97" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1915</span>
+		    <span property="raul:value">1915</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_98" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1914</span>
+		    <span property="raul:value">1914</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_99" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1913</span>
+		    <span property="raul:value">1913</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_100" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1912</span>
+		    <span property="raul:value">1912</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_101" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1911</span>
+		    <span property="raul:value">1911</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_102" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1910</span>
+		    <span property="raul:value">1910</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_103" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1909</span>
+		    <span property="raul:value">1909</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_104" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1908</span>
+		    <span property="raul:value">1908</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_105" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1907</span>
+		    <span property="raul:value">1907</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_106" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1906</span>
+		    <span property="raul:value">1906</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_107" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1905</span>
+		    <span property="raul:value">1905</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_108" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1904</span>
+		    <span property="raul:value">1904</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_109" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1903</span>
+		    <span property="raul:value">1903</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_110" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1902</span>
+		    <span property="raul:value">1902</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_111" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1901</span>
+		    <span property="raul:value">1901</span>
+	      </span>
+        </div> 
+        <div about="http://w3c.org.au/raul/service/public/forms/registeruser#birthday_year_112" typeof="raul:Listitem">
+	      <span style="display:none;">
+		    <span property="raul:label">1900</span>
+		    <span property="raul:value">1900</span>
+	      </span>
+        </div>       
+        <select name="birthday_year" id="birthday_year"> 
+           <option value="0">Year:</option> 
+           <option value="2010">2010</option> 
+           <option value="2009">2009</option> 
+           <option value="2008">2008</option> 
+           <option value="2007">2007</option> 
+           <option value="2006">2006</option> 
+           <option value="2005">2005</option> 
+           <option value="2004">2004</option> 
+           <option value="2003">2003</option> 
+           <option value="2002">2002</option> 
+           <option value="2001">2001</option> 
+           <option value="2000">2000</option> 
+           <option value="1999">1999</option> 
+           <option value="1998">1998</option> 
+           <option value="1997">1997</option> 
+           <option value="1996">1996</option> 
+           <option value="1995">1995</option> 
+           <option value="1994">1994</option> 
+           <option value="1993">1993</option> 
+           <option value="1992">1992</option> 
+           <option value="1991">1991</option> 
+           <option value="1990">1990</option> 
+           <option value="1989">1989</option> 
+           <option value="1988">1988</option> 
+           <option value="1987">1987</option> 
+           <option value="1986">1986</option> 
+           <option value="1985">1985</option> 
+           <option value="1984">1984</option> 
+           <option value="1983">1983</option> 
+           <option value="1982">1982</option> 
+           <option value="1981">1981</option> 
+           <option value="1980">1980</option> 
+           <option value="1979">1979</option> 
+           <option value="1978">1978</option> 
+           <option value="1977">1977</option> 
+           <option value="1976">1976</option> 
+           <option value="1975">1975</option> 
+           <option value="1974">1974</option> 
+           <option value="1973">1973</option> 
+           <option value="1972">1972</option> 
+           <option value="1971">1971</option> 
+           <option value="1970">1970</option> 
+           <option value="1969">1969</option> 
+           <option value="1968">1968</option> 
+           <option value="1967">1967</option> 
+           <option value="1966">1966</option> 
+           <option value="1965">1965</option> 
+           <option value="1964">1964</option> 
+           <option value="1963">1963</option> 
+           <option value="1962">1962</option> 
+           <option value="1961">1961</option> 
+           <option value="1960">1960</option> 
+           <option value="1959">1959</option> 
+           <option value="1958">1958</option> 
+           <option value="1957">1957</option> 
+           <option value="1956">1956</option> 
+           <option value="1955">1955</option> 
+           <option value="1954">1954</option> 
+           <option value="1953">1953</option> 
+           <option value="1952">1952</option> 
+           <option value="1951">1951</option> 
+           <option value="1950">1950</option> 
+           <option value="1949">1949</option> 
+           <option value="1948">1948</option> 
+           <option value="1947">1947</option> 
+           <option value="1946">1946</option> 
+           <option value="1945">1945</option> 
+           <option value="1944">1944</option> 
+           <option value="1943">1943</option> 
+           <option value="1942">1942</option> 
+           <option value="1941">1941</option> 
+           <option value="1940">1940</option> 
+           <option value="1939">1939</option> 
+           <option value="1938">1938</option> 
+           <option value="1937">1937</option> 
+           <option value="1936">1936</option> 
+           <option value="1935">1935</option> 
+           <option value="1934">1934</option> 
+           <option value="1933">1933</option> 
+           <option value="1932">1932</option> 
+           <option value="1931">1931</option> 
+           <option value="1930">1930</option> 
+           <option value="1929">1929</option> 
+           <option value="1928">1928</option> 
+           <option value="1927">1927</option> 
+           <option value="1926">1926</option> 
+           <option value="1925">1925</option> 
+           <option value="1924">1924</option> 
+           <option value="1923">1923</option> 
+           <option value="1922">1922</option> 
+           <option value="1921">1921</option> 
+           <option value="1920">1920</option> 
+           <option value="1919">1919</option> 
+           <option value="1918">1918</option> 
+           <option value="1917">1917</option> 
+           <option value="1916">1916</option> 
+           <option value="1915">1915</option> 
+           <option value="1914">1914</option> 
+           <option value="1913">1913</option> 
+           <option value="1912">1912</option> 
+           <option value="1911">1911</option> 
+           <option value="1910">1910</option> 
+           <option value="1909">1909</option> 
+           <option value="1908">1908</option> 
+           <option value="1907">1907</option> 
+           <option value="1906">1906</option> 
+           <option value="1905">1905</option> 
+           <option value="1904">1904</option> 
+           <option value="1903">1903</option> 
+           <option value="1902">1902</option> 
+           <option value="1901">1901</option> 
+           <option value="1900">1900</option> 
+         </select>
+         <br />
+         
+         <div about="http://w3c.org.au/raul/service/public/forms/registeruser#submit" typeof="raul:Button">
+	         <span style="display:none;">
+		     <span property="raul:command">parseDom(rdf)</span>
+		     <span property="raul:class">submit</span>
+		     <span property="raul:id">id</span>
+		     <span property="raul:name">submit</span>
+		     <span property="raul:value">Register</span>
+		     <span property="raul:checked" datatype="xsd:boolean">false</span>
+	       </span>
+         </div>
+         <span class='break'> <input class='submit' id="submit" type="submit" name="submit" value="Register"  /></span>
+     </div>
+ 
+   </form> 
+
+</div>
+ <div id="footer"> 
+   <h3>&nbsp;</h3>
+</div>
+</div> 
+
+</body> 
+</html>
+
+

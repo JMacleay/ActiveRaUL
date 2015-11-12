@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>RaUL</title>
+<link rel="stylesheet" href="../stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<body>
+
+<header><hgroup>
+<h1><a href="../index.html" rel="contents">RaUL</a></h1>
+<h2><b>Maintaining Linked Data via simple Web forms</b><a href="../index.html" rel="contents"><img src="../images/raul.jpg" alt=""></a></h2>
+</hgroup></header><nav>
+<ul>
+	<li><a href="framework.html">Framework</a></li>
+	<li><a href="lifecycle.html">How Does it Work?</a></li>
+	<li>Installation</li>
+</ul>
+</nav><article>
+
+        <h1>Installation</h1>
+
+<p>To follow the instructions below how to install the web service component of the ActiveRaUL system on your server, you need to first download the WAR file from our Google Code <a href="http://code.google.com/p/activeraul/">project</a>.</p>
+
+        <h2>Prerequisites</h2>
+
+        <ul>
+            <li>Java 5 or newer</li>
+<li>Apache Ant</li>
+
+<li>A Java Servlet Container that supports Java Servlet API 2.4 and Java Server Pages (JSP) 2.0, or newer.</li>
+
+<li>Sesame 2 RDF Store installed</li>
+        </ul>
+<p>The ActiveRaUL system has been tested with Java version "1.7.0", Ant version "1.8.2", Tomcat 6 and Sesame 2.6.3.</p>
+
+<h2>Deploying the ActiveRaUL Web service</h2>
+<p>The easiest way to install the ActiveRaUL service on Tomcat is using the Tomcat Web Application Manager to upload the "raul.war" file. Otherwise, you can manually deploy the ActiveRaUL service on Tomcat according to the following steps.</p>
+        <ol>
+            <li>Build the ActiveRaUL service from source by typing "ant clean; ant dist" under the directory that contains the ActiveRaUL source code.</li>
+<li>Create a native repository with RDF Schema inferencing on Sesame server, and designate the newly create repository as "raul-default". (Please refer to the documents of Sesame server for how to create an RDF repository.)</li>
+<li>Extract the "raul.war" file to the web applications directory ([TOMCAT_HOME]/webapps/ by default).</li>
+<li>Restart your Tomcat server and the ActiveRaUL service should now be up and running.</li>
+</ol>
+<p>Note that you can change the configuration of the RDF repository setting by editing "raul.properties" under the "/src/main/java" directory. Having done so, you should reload the ActiveRaUL service to activate the change.</p>
+<h2>Test the service</h2>
+<p>You can point a web browser to the location where you have installed Sesame (e.g. http://[MACHINE_NAME]:8080/raul/ if you have installed the ActiveRaUL service under Tomcat) to test your installation. The browser should now display a demo web site of the ActiveRaUL system.</p>
+<p>Try our <a href="../demo/demo.html">demo</a> to see how the ActiveRaUL Web service (deployed on this server) can be used.</p>
+
+
+
+</article>
+
+<aside><h2>Try it out.</h2>
+
+<p>Check out our <a href="../demo/demo.html">demo</a> to learn how ActiveRaUL works.</p>
+<h2>Install it now.</h2>
+<p>Download the latest version of ActiveRaUL from our Google Code <a href="http://code.google.com/p/activeraul/">project</a>.</p></aside>
+
+	<footer>
+		<p><a href="about/authors.html">&copy; 2012 </a> &mdash; <a href="about/authors.html">About Authors</a></p>
+	</footer>
+
+</body>
+
+</html>

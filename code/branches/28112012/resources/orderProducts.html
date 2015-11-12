@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:raul="http://purl.org/NET/raul#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:time="http://www.w3.org/2006/timezone" xml:base="http://raul.deri.ie/forms/registration">
+
+<head>
+<style type="text/css">
+   li, ol { list-style-type:none; } 
+</style>
+<link rel="stylesheet" href="css/raul.css">
+
+<title>RaUL - Example for textboxes</title>
+<meta about="#showcase" property="raul:title" content="Textbox example" />
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.core.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rdfa.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rules.min-1.0.js"></script>
+<script type="text/javascript" src="js/blackbird.js"></script>
+<script type="text/javascript">
+  $(document).ready( function() {
+    $("form#showRDF").submit(  function() {
+        // alert('Handler for .submit() called.');
+       
+        var rdf = parseDom();
+       
+       $("#result").find("tr:gt(0)").remove();
+        $('#result tr:last').after('<tr><td style="font: bold;">subject</td><td>predicate</td><td>object</td></tr>'); 
+        rdf.where('?s ?p ?o')
+    	.each(function() {
+    		$('#result tr:last').after('<tr><td>'+this.s.value+'</td><td>'+this.p.value+'</td><td>'+this.o.value+'</td></tr>');
+    	});
+        return false;
+      });
+  });
+</script>
+<script type="text/javascript" src="js/raul.js"></script>
+  
+</head>
+
+<body>
+    <div id="frame">
+        <div id="header">
+           <h1>RaUL</h1>
+           <h2>Example of a textbox</h2>
+        </div>
+         <div id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    </ul>
+                     <input id="show" type="submit" name="show" value="show"  />
+                    </div>
+                             <div id="content">
+                     <form method="post" action="" id="buyProduct"> 
+                          <div about="#buyProduct" typeof="raul:Page"> 
+                            <span property="raul:id" content="maindiv"></span> 
+                            <span property="raul:widgets" content="http://raul.deri.ie/forms/buyproduct#buyProductContainer"></span> 
+                            <div about="#buyProductContainer" typeof="raul:WidgetContainer"> 
+                              <span property="raul:method" content="http://raul.deri.ie/forms/buyproduct#postProduct"></span> 
+                              <span property="raul:id" content="buyProduct"></span> 
+                              <span property="raul:action" content=""></span> 
+                              <span property="raul:list" content="http://raul.deri.ie/forms/buyproduct#buyProductContainerList"></span> 
+                              <div about="#postProduct" typeof="raul:CREATEOperation"> 
+                              </div> 
+                              <ol about="#buyProductContainerList" typeof="rdf:Seq"> 
+                                <li rel="raul:list" resource="#product_name"> 
+                                </li> 
+                                <li rel="raul:list" resource="#product_description"> 
+                                </li> 
+                                <li rel="raul:list" resource="#product_amount"> 
+                                </li>
+                                <li rel="raul:list" resource="#transaction_type"> 
+                                </li> 
+                                <li rel="raul:list" resource="#product_price"> 
+                                </li> 
+                                <li rel="raul:list" resource="#price_currency"> 
+                                </li> 
+                              </ol> 
+                              <p> 
+                                <span about="#valueproduct_name"> 
+                                <span property="rdf:subject" content="http://raul.deri.ie/forms/buyproduct#123"></span> 
+                                <span property="rdf:predicate" content="rdfs:label"></span> 
+                                <span property="rdf:object" content="Sony Bravia LX900"></span> 
+                                </span> 
+                                <span about="#valueproduct_description"> 
+                                <span property="rdf:subject" content="http://raul.deri.ie/forms/buyproduct#123"></span> 
+                                <span property="rdf:predicate" content="rdfs:comment"></span> 
+                                <span property="rdf:object" content="LCD Television"></span> 
+                                </span> 
+                                <span about="#valueproduct_amount"> 
+                                <span property="rdf:subject" content="http://raul.deri.ie/forms/buyproduct#123"></span> 
+                                <span property="rdf:predicate" content="gr:amountOfThisGood"></span> 
+                                <span property="rdf:object" content=""></span> 
+                                </span>                
+                                <span about="#valuetransaction_type"> 
+                                <span property="rdf:subject" content="http://raul.deri.ie/forms/buyproduct#123"></span> 
+                                <span property="rdf:predicate" content="gr:hasBusinessFunction"></span> 
+                                <span property="rdf:object" content="Buy"></span> 
+                                </span> 
+                                <span about="#valueproduct_price"> 
+                                <span property="rdf:subject" content="http://raul.deri.ie/forms/buyproduct#123"></span> 
+                                <span property="rdf:predicate" content="gr:hasCurrency"></span> 
+                                <span property="rdf:object" content="USD"></span> 
+                                </span> 
+                                <span about="#valueprice_currency"> 
+                                <span property="rdf:subject" content="http://raul.deri.ie/forms/buyproduct#123"></span> 
+                                <span property="rdf:predicate" content="gr:hasUnitOfMeasurement"></span> 
+                                <span property="rdf:object" content="#price_currency_1"></span> 
+                                </span> 
+                              </p> 
+                              <span class='break'  about="#product_name" typeof="raul:Textbox"> 
+                              <span class='key' property="raul:label" datatype="xsd:string">Product Name:</span> 
+                              <input class='value' type="text" class="inputtext" id="product_name" value="Sony Bravia LX900" readonly="readonly"/> 
+                              <span property="raul:value" content="#valueproduct_name"></span> 
+                              <span property="raul:class" content="inputtext"></span> 
+                              <span property="raul:id" content="product_name"></span> 
+                              <span property="raul:disabled" content="true"></span>
+                              </span> 
+                              <br /> 
+                              <span class='break' about="#product_description" typeof="raul:Textbox"> 
+                              <span class='key' property="raul:label" datatype="xsd:string">Product Description:</span> 
+                              <textarea class='value' rows="4" cols="50" class="inputtext" id="product_description" readonly="readonly">LCD Television</textarea> 
+                              <span property="raul:value" content="#valueproduct_description"></span> 
+                              <span property="raul:class" content="inputtext"></span> 
+                              <span property="raul:id" content="product_description"></span>
+                              <span property="raul:row" content="4"></span>
+                              <span property="raul:size" content="50"></span>
+                              <span property="raul:disabled" content="true"></span> 
+                              </span> 
+                              <br /><span class='break' about="#product_amount" typeof="raul:Textbox"> 
+                                   <span class='key' property="raul:label" datatype="xsd:string">Amount:</span> 
+                              <input class='value' type="text" class="inputtext" id="product_amount" value=""/> 
+                              <span property="raul:value" content="#valueproduct_amount"></span> 
+                              <span property="raul:class" content="inputtext"></span> 
+                              <span property="raul:id" content="product_amount"></span>
+                              </span>
+                              <br /> 
+                              <span class='break' about="#transaction_type" typeof="raul:Textbox"> 
+                                                                     <span class='key' property="raul:label" datatype="xsd:string">Transaction Type:</span> 
+                                  <input class='value' type="text" class="inputtext" id="transaction_type" value="Buy" readonly="readonly"/> 
+                                  <span property="raul:value" content="#valuetransaction_type"></span> 
+                                  <span property="raul:class" content="inputtext"></span> 
+                                  <span property="raul:id" content="transaction_type"></span>
+                                  <span property="raul:disabled" content="true"></span> 
+                              </span>
+                              <span class='break' about="#product_price" typeof="raul:Textbox">
+                                  <span class='key' property="raul:label" datatype="xsd:string">Price:</span>  
+                              <input class='value' type="text" class="inputtext" id="product_price" value="5500" readonly="readonly"/> 
+                              <span property="raul:value" content="#valueproduct_price"></span> 
+                              <span property="raul:class" content="inputtext"></span> 
+                              <span property="raul:id" content="product_price"></span>
+                              <span property="raul:disabled" content="true"></span>
+                              </span>
+                              <span about="#price_currency" typeof="raul:Listbox"> 
+                              <select id="price_currency" name="price_currency"> 
+                                <option value="USD"> 
+                                  USD
+                                </option> 
+                                <option value="EUR"> 
+                                  EUR
+                                </option> 
+                                <option value="JPY"> 
+                                  JPY
+                                </option> 
+                                <option value="GBP"> 
+                                  GBP
+                                </option> 
+                                <option value="AUD"> 
+                                  AUD
+                                </option> 
+                                <option value="CHF"> 
+                                  CHF
+                                </option> 
+                              </select> 
+                              <span property="raul:id" content="transaction_type"></span> 
+                              <span property="raul:value" content="#valueprice_currency"></span> 
+                              <span property="raul:options" content="http://raul.deri.ie/forms/buyproduct#price_currency_options"></span> 
+                              </span> 
+                              <ol about="http://raul.deri.ie/forms/buyproduct#price_currency_options" typeof="rdf:Seq"> 
+                                <li style="display: none;" rel="raul:options" resource="#price_currency_1"> 
+                                </li> 
+                                <li style="display: none;" rel="raul:options" resource="#price_currency_2"> 
+                                </li> 
+                                <li style="display: none;" rel="raul:options" resource="#price_currency_3"> 
+                                </li> 
+                                <li style="display: none;" rel="raul:options" resource="#price_currency_4"> 
+                                </li> 
+                                <li style="display: none;" rel="raul:options" resource="#price_currency_5"> 
+                                </li> 
+                                <li style="display: none;" rel="raul:options" resource="#price_currency_6"> 
+                                </li> 
+                              </ol> 
+                              <span about="#price_currency_1" typeof="raul:Listitem" property="raul:label" content="USD"><span property="raul:value" content="USD"></span></span> 
+                              <span about="#price_currency_2" typeof="raul:Listitem" property="raul:label" content="EUR"><span property="raul:value" content="EUR"></span></span> 
+                              <span about="#price_currency_3" typeof="raul:Listitem" property="raul:label" content="JPY"><span property="raul:value" content="JPY"></span></span> 
+                              <span about="#price_currency_4" typeof="raul:Listitem" property="raul:label" content="GBP"><span property="raul:value" content="GBP"></span></span> 
+                              <span about="#price_currency_5" typeof="raul:Listitem" property="raul:label" content="AUD"><span property="raul:value" content="AUD"></span></span> 
+                              <span about="#price_currency_6" typeof="raul:Listitem" property="raul:label" content="CHF"><span property="raul:value" content="CHF"></span></span><br /> 
+                              <span about="#submit" typeof="raul:Button"> 
+                              <span property="raul:command" content="parseDom(rdf)"></span> 
+                              <span property="raul:label" content="submit"></span> 
+                              </span> 
+                            </div> 
+                            </div> 
+                            <br />
+                           <span class='break'><input class='submit' id="submit" type="submit" name="submit" value="Order"  /></span>
+                        </form> 
+                        <table id="result"> 
+                          <tr> 
+                            <td> 
+                            </td> 
+                            <td> 
+                            </td> 
+                            <td> 
+                            </td> 
+                          </tr> 
+                        </table> 
+                      </div>
+    <div id="footer">
+&nbsp;
+    </div>
+</div>    
+
+</body>
+</html>

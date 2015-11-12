@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:raul="http://purl.org/NET/raul#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:time="http://www.w3.org/2006/timezone" xml:base="http://raul.deri.ie/forms/registration"> 
+  <head> 
+    <style type="text/css"> 
+       li,ol {
+      	list-style-type: none;
+      } 
+    </style> 
+    <meta about="#registerAccount" property="raul:title" content="Registration" /> 
+    <title> 
+      Registration
+    </title> 
+    <link rel="stylesheet" href="css/raul.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/jquery.snippet.min.css" />
+    <link type="text/css" rel="Stylesheet" href="css/blackbird.css" /> 
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"> 
+    </script> 
+    <script type="text/javascript" src="js/jquery.json-2.2.min.js"> 
+    </script> 
+    <script type="text/javascript" src="js/jquery.rdfquery.core.min-1.0.js"> 
+    </script> 
+    <script type="text/javascript" src="js/jquery.rdfquery.rdfa.min-1.0.js"> 
+    </script> 
+    <script type="text/javascript" src="js/jquery.rdfquery.rules.min-1.0.js"> 
+    </script> 
+    <script type="text/javascript" src="js/jquery.snippet.min.js"> 
+    </script>
+    <script type="text/javascript" src="js/blackbird.js"> 
+    </script> 
+    <script type="text/javascript"> 
+       $(document).ready(
+      			function() {
+      			    $("pre#test").snippet("html",{style:"dull"});
+      				$('#submit').click(function() {
+                                 var rdf = parseDom();
+                                log.info(rdf.databank.dump({format:'application/rdf+xml', serialize: true}));
+                                // $("#frame").append("<div>"+rdf.databank.dump({format:'application/rdf+xml', serialize: true})+"</div>");
+                                $.ajax({
+                                                  type: 'POST',
+                                                  url: 'http://www.example.com/books/',
+                                                  processData: false,
+                                                  contentType: 'application/rdf+xml',
+                                                  data: rdf.dump('application/rdf+xml')
+                                                });
+      
+                                return false;
+                              });
+                           $('#show').click(function() {
+                                   log.info("show the parsed RDF")
+                                   $("#result").find("tr:gt(0)").remove();
+                                   var rdf = parseDom();
+      
+                                    $("#result").find("tr:gt(0)").remove();
+                                          $('#result tr:last').after('<tr><td style="font: bold;">subject</td><td>predicate</td><td>object</td></tr>'); 
+                                          rdf.where('?s ?p ?o')
+                                        .each(function() {
+                                            $('#result tr:last').after('<tr><td>'+this.s.value+'</td><td>'+this.p.value+'</td><td>'+this.o.value+'</td></tr>');
+                                        });
+                                     return false;
+                                 });
+                                   $('#logging').click(function() {
+                                     log.toggle();
+                                   });
+      			}); 
+    </script> 
+    <script type="text/javascript" src="js/raul.js"> 
+    </script>
+  </head> 
+  <body> 
+    <div id="frame"> 
+      <div id="header"> 
+        <h1> 
+          RaUL
+        </h1> 
+        <h2> 
+          Example of a textbox
+        </h2> 
+      </div> 
+      <div id="nav"> 
+        <ul> 
+          <li> 
+            <a href="index.html"> 
+              Home
+            </a> 
+          </li>
+                          <li><a href="widgets.html">Widgets</a></li> 
+          <li> 
+            <a href="demo.html"> 
+              Demo
+            </a> 
+          </li> 
+        </ul> 
+        <input id="logging" type="submit" name="logging" value="logging" /> 
+      </div> 
+      <div id="content_main"> 
+        <h3>Container Example</h3>
+        <form method="post" action="" id="register"> 
+          <div about="#registerAccount" typeof="raul:Page"> 
+            <span property="raul:id" content="maindiv"></span> 
+            <span property="raul:widgets" content="http://raul.deri.ie/forms/registration#registerContainer"></span> 
+            <div about="#registerContainer" typeof="raul:WidgetContainer"> 
+              <span property="raul:method" content="http://raul.deri.ie/forms/registration#postAccount"></span> 
+              <span property="raul:id" content="register"></span> 
+              <span property="raul:action" content="http://register.facebook.com/r.php"></span> 
+              <span property="raul:list" content="http://raul.deri.ie/forms/registration#registerContainerList"></span> 
+              <div about="#postAccount" typeof="raul:CREATEOperation"> 
+            </div> 
+              <ol about="#registerContainer_list" typeof="rdf:Seq"> 
+                <li rel="raul:list" resource="#firstname"> 
+                </li> 
+                <li rel="raul:list" resource="#sex_1"> 
+                </li> 
+                <li rel="raul:list" resource="#sex_2"> 
+                </li> 
+                <li rel="raul:list" resource="#birthday_day"> 
+                </li> 
+              </ol> 
+              <p> 
+                <span about="#valuefirstname"> 
+                <span property="rdf:subject" content="http://raul.deri.ie/forms/registerAccount#123"> 
+                </span><span property="rdf:predicate" content="foaf:name"></span> 
+                <span property="rdf:object" content=""></span> 
+                </span> 
+                <span about="#valuesex"> 
+                <span property="rdf:subject" content="http://raul.deri.ie/forms/registerAccount#123"></span> 
+                <span property="rdf:predicate" content="foaf:gender"></span> 
+                <span property="rdf:object" content=""></span> 
+                </span> 
+                <span about="#valuebirthday_day"> 
+                <span property="rdf:subject" content="http://raul.deri.ie/forms/registerAccount#123"></span> 
+                <span property="rdf:predicate" content="time:day"></span> 
+                <span property="rdf:object" content=""></span> 
+                </span> 
+              </p> 
+            <br /><br />
+              <span about="#submit" typeof="raul:Button"> 
+              <span property="raul:command" content="parseDom(rdf)"></span> 
+              <span property="raul:label" content="submit"></span> 
+              </span> 
+            </div> 
+          </div> 
+        <input id="show" type="submit" name="show" value="show"  /><input id="submit" type="submit" name="submit" value="submit"  />
+        </form> 
+        <pre id="test">
+            &lt;form method=&quot;post&quot; action=&quot;&quot; id=&quot;register&quot;&gt; 
+                         &lt;div about=&quot;#registerAccount&quot; typeof=&quot;raul:Page&quot;&gt; 
+                           &lt;span property=&quot;raul:id&quot; content=&quot;maindiv&quot;&gt;&lt;/span&gt; 
+                           &lt;span property=&quot;raul:widgets&quot; content=&quot;http://raul.deri.ie/forms/registration#registerContainer&quot;&gt;&lt;/span&gt; 
+                           &lt;div about=&quot;#registerContainer&quot; typeof=&quot;raul:WidgetContainer&quot;&gt; 
+                             &lt;span property=&quot;raul:method&quot; content=&quot;http://raul.deri.ie/forms/registration#postAccount&quot;&gt;&lt;/span&gt; 
+                             &lt;span property=&quot;raul:id&quot; content=&quot;register&quot;&gt;&lt;/span&gt; 
+                             &lt;span property=&quot;raul:action&quot; content=&quot;http://register.facebook.com/r.php&quot;&gt;&lt;/span&gt; 
+                             &lt;span property=&quot;raul:list&quot; content=&quot;http://raul.deri.ie/forms/registration#registerContainerList&quot;&gt;&lt;/span&gt; 
+                             &lt;div about=&quot;#postAccount&quot; typeof=&quot;raul:CREATEOperation&quot;&gt; 
+                           &lt;/div&gt; 
+                             &lt;ol about=&quot;#registerContainer_list&quot; typeof=&quot;rdf:Seq&quot;&gt; 
+                               &lt;li rel=&quot;raul:list&quot; resource=&quot;#firstname&quot;&gt; 
+                               &lt;/li&gt; 
+                               &lt;li rel=&quot;raul:list&quot; resource=&quot;#sex_1&quot;&gt; 
+                               &lt;/li&gt; 
+                               &lt;li rel=&quot;raul:list&quot; resource=&quot;#sex_2&quot;&gt; 
+                               &lt;/li&gt; 
+                               &lt;li rel=&quot;raul:list&quot; resource=&quot;#birthday_day&quot;&gt; 
+                               &lt;/li&gt; 
+                             &lt;/ol&gt; 
+                             &lt;p&gt; 
+                               &lt;span about=&quot;#valuefirstname&quot;&gt; 
+                               &lt;span property=&quot;rdf:subject&quot; content=&quot;http://raul.deri.ie/forms/registerAccount#123&quot;&gt; 
+                               &lt;/span&gt;&lt;span property=&quot;rdf:predicate&quot; content=&quot;foaf:name&quot;&gt;&lt;/span&gt; 
+                               &lt;span property=&quot;rdf:object&quot; content=&quot;&quot;&gt;&lt;/span&gt; 
+                               &lt;/span&gt; 
+                               &lt;span about=&quot;#valuesex&quot;&gt; 
+                               &lt;span property=&quot;rdf:subject&quot; content=&quot;http://raul.deri.ie/forms/registerAccount#123&quot;&gt;&lt;/span&gt; 
+                               &lt;span property=&quot;rdf:predicate&quot; content=&quot;foaf:gender&quot;&gt;&lt;/span&gt; 
+                               &lt;span property=&quot;rdf:object&quot; content=&quot;&quot;&gt;&lt;/span&gt; 
+                               &lt;/span&gt; 
+                               &lt;span about=&quot;#valuebirthday_day&quot;&gt; 
+                               &lt;span property=&quot;rdf:subject&quot; content=&quot;http://raul.deri.ie/forms/registerAccount#123&quot;&gt;&lt;/span&gt; 
+                               &lt;span property=&quot;rdf:predicate&quot; content=&quot;time:day&quot;&gt;&lt;/span&gt; 
+                               &lt;span property=&quot;rdf:object&quot; content=&quot;&quot;&gt;&lt;/span&gt; 
+                               &lt;/span&gt; 
+                             &lt;/p&gt; 
+                           &lt;br /&gt;&lt;br /&gt;
+                             &lt;span about=&quot;#submit&quot; typeof=&quot;raul:Button&quot;&gt; 
+                             &lt;span property=&quot;raul:command&quot; content=&quot;parseDom(rdf)&quot;&gt;&lt;/span&gt; 
+                             &lt;span property=&quot;raul:label&quot; content=&quot;submit&quot;&gt;&lt;/span&gt; 
+                             &lt;/span&gt; 
+                           &lt;/div&gt; 
+                         &lt;/div&gt; 
+                       &lt;input id=&quot;show&quot; type=&quot;submit&quot; name=&quot;show&quot; value=&quot;show&quot;  /&gt;&lt;input id=&quot;submit&quot; type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;submit&quot;  /&gt;
+                       &lt;/form&gt;
+            </pre>
+        <table id="result"> 
+          <tr> 
+            <td> 
+            </td> 
+            <td> 
+            </td> 
+            <td> 
+            </td> 
+          </tr> 
+        </table> 
+      </div> 
+      <div id="footer"> 
+&nbsp;
+      </div> 
+    </div> 
+  </body> 
+</html>

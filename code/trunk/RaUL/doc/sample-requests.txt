@@ -1,0 +1,19 @@
+﻿Request:
+GET raul.deri.ie/forms/taxreturn
+HTTP/1.1
+Accept: text/x-html
+
+Response:
+Status: OK (200)
+HTML page
+
+---------------
+
+Request:
+GET raul.deri.ie/forms/taxreturn
+HTTP/1.1
+Accept: application/jsonrdf
+
+Response:
+Status: OK (200)
+Body: JSON RDF

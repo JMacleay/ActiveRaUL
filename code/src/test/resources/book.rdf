@@ -1,0 +1,27 @@
+<!DOCTYPE rdf:RDF [
+<!ENTITY ontology "http://cecs.anu.edu.au/feit/exam#">
+]>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:ontology="http://cecs.anu.edu.au/feit/exam#">
+<rdf:Description rdf:about="&ontology;Publication">
+<rdf:type
+rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+<rdfs:Class rdf:about="&ontology;Book">
+<rdfs:subClassOf rdf:resource="&ontology;Publication"/>
+</rdfs:Class>
+<rdf:Description rdf:about="&ontology;AngelsandDemons">
+<rdf:type rdf:resource="&ontology;Book"/>
+</rdf:Description>
+<rdf:Description rdf:about="&ontology;Breath">
+<rdf:type rdf:resource="&ontology;Book"/>
+<ontology:hasAuthor>
+Tim Winton
+</ontology:hasAuthor>
+</rdf:Description>
+<rdf:Description rdf:about="&ontology;DanBrown">
+<ontology:isAuthor rdf:resource="&ontology;AngelsandDemons"/>
+</rdf:Description>
+</rdf:RDF>

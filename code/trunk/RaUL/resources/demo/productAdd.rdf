@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF	
+	xmlns:gr="http://purl.org/goodrelations/v1#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	
+	xmlns:raul="http://purl.org/NET/raul#">
+	
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Page"></rdf:type>
+	<raul:id>content</raul:id>
+	<raul:list>http://w3c.org.au/raul/service/public/forms/productAdd#widgetContainerList</raul:list>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#widgetContainerList">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"></rdf:type>
+	<rdf:_1 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#container"></rdf:_1>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#container">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#WidgetContainer"></rdf:type>
+	<raul:method>http://w3c.org.au/raul/service/public/forms/productAdd#method</raul:method>
+	<raul:id>productAdd</raul:id>
+	<raul:list>http://w3c.org.au/raul/service/public/forms/productAdd#containerList</raul:list>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#method">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#CREATEOperation"></rdf:type>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#containerList">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"></rdf:type>	
+	<rdf:_1 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#product"></rdf:_1>
+	<rdf:_2 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#update"></rdf:_2>
+	<rdf:_3 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#product_name"></rdf:_3>
+	<rdf:_4 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#product_description"></rdf:_4>
+	<rdf:_5 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type"></rdf:_5>
+	<rdf:_6 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#product_price"></rdf:_6>	
+	<rdf:_7 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options"></rdf:_7>
+	<rdf:_8 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#submit"></rdf:_8>	
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#product">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"></rdf:type>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product URI:</raul:label>
+	<raul:id>product</raul:id>
+	<raul:name>product</raul:name>
+	<raul:value>http://w3c.org.au/raul/service/public/forms/productAdd#value_product</raul:value>	
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#value_product">	
+	<rdf:subject></rdf:subject>
+	<rdf:predicate>owl:sameAs</rdf:predicate>
+	<rdf:object></rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#update">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Button"></rdf:type>
+	<raul:command>refExtData('product', '', '', 'gr:description', '')</raul:command>
+	<raul:id>update</raul:id>
+	<raul:name>update</raul:name>
+	<raul:value>update</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#product_name">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"></rdf:type>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product Name:</raul:label>
+	<raul:id>product_name</raul:id>
+	<raul:name>product_name</raul:name>
+	<raul:value>http://w3c.org.au/raul/service/public/forms/productAdd#value_product_name</raul:value>	
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#value_product_name">	
+	<rdf:subject></rdf:subject>
+	<rdf:predicate>gr:name</rdf:predicate>
+	<rdf:object></rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#product_description">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"></rdf:type>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product Description:</raul:label>
+	<raul:id>product_description</raul:id>
+	<raul:name>product_description</raul:name>
+	<raul:row rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</raul:row>
+	<raul:size>50</raul:size>
+	<raul:value>http://w3c.org.au/raul/service/public/forms/productAdd#value_product_description</raul:value>	
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#value_product_description">	
+	<rdf:subject></rdf:subject>
+	<rdf:predicate>gr:description</rdf:predicate>
+	<rdf:object></rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listbox"></rdf:type>	
+	<raul:id>transaction_type</raul:id>
+	<raul:name>transaction_type</raul:name>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Offer Type</raul:label>
+	<raul:list>http://w3c.org.au/raul/service/public/forms/productAdd#list_transaction_type</raul:list>
+	<raul:value>http://w3c.org.au/raul/service/public/forms/productAdd#value_transaction_type</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#value_transaction_type">
+	<rdf:subject></rdf:subject>
+	<rdf:predicate>gr:hasBusinessFunction</rdf:predicate>
+	<rdf:object></rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#list_transaction_type">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"></rdf:type>	
+	<rdf:_1 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_0"/>
+	<rdf:_2 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_1"/>
+	<rdf:_3 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_2"/>
+	<rdf:_4 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_3"/>
+	<rdf:_5 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_0">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>Lease Out</raul:label>
+	<raul:value>http://purl.org/goodrelations/v1#LeaseOut</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_1">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>Maintain</raul:label>
+	<raul:value>http://purl.org/goodrelations/v1#Maintain</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_2">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>Provide Service</raul:label>
+	<raul:value>http://purl.org/goodrelations/v1#ProvideService</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_3">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>Repair</raul:label>
+	<raul:value>http://purl.org/goodrelations/v1#Repair</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#transaction_type_4">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>Sell</raul:label>
+	<raul:value>http://purl.org/goodrelations/v1#Sell</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#product_price">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"></rdf:type>
+	<raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Price:</raul:label>
+	<raul:id>product_price</raul:id>
+	<raul:name>product_price</raul:name>
+	<raul:value>http://w3c.org.au/raul/service/public/forms/productAdd#value_product_price</raul:value>	
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#value_product_price">	
+	<rdf:subject></rdf:subject>
+	<rdf:predicate>gr:hasCurrencyValue</rdf:predicate>
+	<rdf:object></rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listbox"></rdf:type>	
+	<raul:id>price_currency_options</raul:id>
+	<raul:name>price_currency_options</raul:name>
+	<raul:list>http://w3c.org.au/raul/service/public/forms/productAdd#list_price_currency_options</raul:list>
+	<raul:value>http://w3c.org.au/raul/service/public/forms/productAdd#value_price_currency_options</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#value_price_currency_options">
+	<rdf:subject></rdf:subject>
+	<rdf:predicate>gr:hasCurrency</rdf:predicate>
+	<rdf:object></rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#list_price_currency_options">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"></rdf:type>
+	<rdf:_1 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_0"/>
+	<rdf:_2 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_1"/>
+	<rdf:_3 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_2"/>
+	<rdf:_4 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_3"/>
+	<rdf:_5 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_4"/>
+	<rdf:_6 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_0">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>USD</raul:label>
+	<raul:value>USD</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_1">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>EUR</raul:label>
+	<raul:value>EUR</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_2">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>JPY</raul:label>
+	<raul:value>JPY</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_3">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>GBP</raul:label>
+	<raul:value>GBP</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_4">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>AUD</raul:label>
+	<raul:value>AUD</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_5">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<raul:label>CHF</raul:label>
+	<raul:value>CHF</raul:value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#submit">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Button"></rdf:type>
+	<raul:command>submitDataWrap()</raul:command>	
+	<raul:id>Submit</raul:id>
+	<raul:name>Submit</raul:name>
+	<raul:value>Submit</raul:value>
+</rdf:Description>
+	
+</rdf:RDF>
+

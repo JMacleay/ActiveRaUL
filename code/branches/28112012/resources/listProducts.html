@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:raul="http://purl.org/NET/raul#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:time="http://www.w3.org/2006/timezone" xml:base="http://raul.deri.ie/forms/registration">
+
+<head>
+<style type="text/css">
+   li, ol { list-style-type:none; } 
+</style>
+<link rel="stylesheet" href="css/raul.css">
+
+<title>RaUL - Example for textboxes</title>
+<meta about="#showcase" property="raul:title" content="Textbox example" />
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.core.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rdfa.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rules.min-1.0.js"></script>
+<script type="text/javascript" src="js/blackbird.js"></script>
+<script type="text/javascript">
+  $(document).ready( function() {
+    $("form#showRDF").submit(  function() {
+        // alert('Handler for .submit() called.');
+       
+        var rdf = parseDom();
+       
+       $("#result").find("tr:gt(0)").remove();
+        $('#result tr:last').after('<tr><td style="font: bold;">subject</td><td>predicate</td><td>object</td></tr>'); 
+        rdf.where('?s ?p ?o')
+    	.each(function() {
+    		$('#result tr:last').after('<tr><td>'+this.s.value+'</td><td>'+this.p.value+'</td><td>'+this.o.value+'</td></tr>');
+    	});
+        return false;
+      });
+  });
+</script>
+<script type="text/javascript" src="js/raul.js"></script>
+  
+</head>
+
+<body>
+    <div id="frame">
+        <div id="header">
+           <h1>RaUL</h1>
+           <h2>Example of a textbox</h2>
+        </div>
+         <div id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    </ul>
+                    </div>
+        <div id="content">
+
+
+<form method="post" action="" id="showRDF">
+<div about="#showcase" typeof="raul:Page">
+  <span property="raul:id" content="maindiv"> </span>
+  <span property="raul:widgets" content="http://raul.deri.ie/forms/example#showTextbox"></span>
+  
+
+ <div about="showcaseContainer" typeof="raul:WidgetContainer">
+     <span property="raul:method" content="http://raul.deri.ie/forms/example#MethodDisabled"> </span>
+     <span property="raul:id" content="register" ></span>
+     <span property="raul:action" content="http://register.facebook.com/r.php"></span>
+     <span property="raul:list" content="http://raul.deri.ie/forms/registration#registerContainerList" ></span>
+
+ <div about="#postAccount" typeof="raul:CREATEOperation"></div>
+    <ol about="#registerContainer_list" typeof="rdf:Seq">
+        <li rel="raul:list" resource="firstname"></li>
+    </ol>
+<p>
+<span about="valuefirstname">
+<span property="rdf:subject" content="http://raul.deri.ie/forms/registerAccount#123"></span>
+<span property="rdf:predicate" content="foaf:name"></span>
+<span property="rdf:object" content=""></span>
+</span>
+</p>
+    <span about="firstname" typeof="raul:Textbox">
+	    <span property="raul:label" datatype="xsd:string">First Name:</span>
+		<input type="text" class="inputtext" id="firstname" name="firstname" value="" />
+		<span property="raul:value" content="valuefirstname"></span>
+		<span property="raul:class" datatype="xsd:string" content="inputtext"></span>
+		<span property="raul:id" datatype="xsd:string" content="firstname"></span>
+		<span property="raul:name" datatype="xsd:string" content="firstname"></span>
+	</span>
+</div>
+</div>
+<br /><br />
+<input type="submit" name="submit" value="parse and show RDF"  />
+</form>		
+
+<table id="result">
+    <tr><td></td><td></td><td></td></tr>
+</table>
+    </div>
+    <div id="footer">
+&nbsp;
+    </div>
+</div>    
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#" 
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:raul="http://purl.org/NET/raul#">
+
+   <owl:Ontology 
+     rdf:about="http://purl.org/NET/raul#">
+ </owl:Ontology>
+  
+  <foaf:Document rdf:about="http://vocab.deri.ie/raul">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:title>RAUL Vocabulary</dc:title>
+    <dc:description>A vocabulary to describe HTML form elements.</dc:description>
+    <vann:preferredNamespaceUri>http://purl.org/NET/raul#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>raul</vann:preferredNamespacePrefix>
+    <dc:creator rdf:resource="http://vocab.deri.ie/raul#ahaller"/>
+	<dc:creator rdf:resource="http://vocab.deri.ie/raul#pcchen"/>
+    <dc:creator rdf:resource="http://vocab.deri.ie/raul#juum"/>
+    <dc:creator rdf:resource="http://vocab.deri.ie/raul#Michael%20Hausenblas"/>
+  </foaf:Document>
+
+  <foaf:Person rdf:about="http://vocab.deri.ie/raul#ahaller">
+    <foaf:name>Armin Haller</foaf:name>
+  </foaf:Person>
+
+  <foaf:Organization rdf:about="http://vocab.deri.ie/raul#CSIRO">
+    <foaf:member rdf:resource="http://vocab.deri.ie/raul#ahaller"/>
+    <foaf:name>CSIRO</foaf:name>
+  </foaf:Organization>
+  
+  <foaf:Person rdf:about="http://vocab.deri.ie/raul#pcchen">
+    <foaf:name>Po-Cheng Chen</foaf:name>
+  </foaf:Person>
+  
+  <foaf:Organization rdf:about="http://vocab.deri.ie/raul#NCKU">
+    <foaf:member rdf:resource="http://vocab.deri.ie/raul#pcchen"/>
+    <foaf:name>NCKU</foaf:name>
+  </foaf:Organization>
+
+  <foaf:Person rdf:about="http://vocab.deri.ie/raul#juum">
+    <foaf:name>Juergen Umbrich</foaf:name>
+    <foaf:homepage rdf:resource="http://umbrich.net/"/>
+
+  </foaf:Person>
+
+  <foaf:Organization rdf:about="http://vocab.deri.ie/raul#DERI">
+    <foaf:member rdf:resource="http://vocab.deri.ie/raul#juum"/>
+    <foaf:name>DERI</foaf:name>
+    <foaf:homepage rdf:resource="http://www.deri.ie/"/>
+  </foaf:Organization>
+
+  <foaf:Person rdf:about="http://vocab.deri.ie/raul#Michael%20Hausenblas">
+    <foaf:name>Michael Hausenblas</foaf:name>
+    <foaf:homepage rdf:resource="http://sw-app.org/about.html"/>
+    <foaf:mbox rdf:resource="mailto:michael.hausenblas@deri.org"/>
+  </foaf:Person>
+
+  <foaf:Organization rdf:about="http://vocab.deri.ie/raul#LiDRC">
+    <foaf:member rdf:resource="http://vocab.deri.ie/raul#Michael%20Hausenblas"/>
+    <foaf:name>LiDRC</foaf:name>
+    <foaf:homepage rdf:resource="http://linkeddata.deri.ie/"/>
+  </foaf:Organization>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#Listbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>Listbox</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Widget"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#Widget">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>Widget</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Page"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#Textbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>Textbox</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Widget"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#Page">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>Page</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#Checkbox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>Checkbox</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Button"/>
+
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#Button">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>Button</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Widget"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#Listitem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>Listitem</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Widget"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#CRUDOperation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>CRUDOperation</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#Group">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>Group</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Widget"/>
+  </rdfs:Class>
+  
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#DynamicGroup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>DynamicGroup</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Widget"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#Radiobutton">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>Radiobutton</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Button"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#WidgetContainer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>WidgetContainer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#Widget"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#UPDATEOperation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#CRUDOperation"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#READOperation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#CRUDOperation"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#CREATEOperation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#CRUDOperation"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://purl.org/NET/raul#DELETEOperation">
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/raul#CRUDOperation"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#checked">
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Button"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>checked</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Button"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+  
+  <rdf:Property rdf:about="http://purl.org/NET/raul#selected">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>selected</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Listitem"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#label">
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Widget"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>label</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#isPassword">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>isPassword</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Textbox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+  
+  <rdf:Property rdf:about="http://purl.org/NET/raul#isIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>isIdentifier</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Widget"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>title</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Page"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>value</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Widget"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#row">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>row</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Widget"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#command">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>command</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Button"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#id">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>id</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Page"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#hidden">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>hidden</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Widget"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#size">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>size</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Textbox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#class">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>class</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Page"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>name</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Widget"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#maxlength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>maxlength</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Textbox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#action">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>action</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#WidgetContainer"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#list">
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Page"/>
+    <rdfs:label>list</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#disabled">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>disabled</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Widget"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#method">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>method</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#WidgetContainer"/>
+    <rdfs:range rdf:resource="http://purl.org/NET/raul#CRUDOperation"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://purl.org/NET/raul#multiple">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>multiple</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Listbox"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+  
+  <rdf:Property rdf:about="http://purl.org/NET/raul#group">
+    <rdfs:isDefinedBy rdf:resource="http://vocab.deri.ie/raul"/>
+    <rdfs:label>group</rdfs:label>
+    <rdfs:domain rdf:resource="http://purl.org/NET/raul#Widget"/>
+    <rdfs:range rdf:resource="http://purl.org/NET/raul#Group"/>
+  </rdf:Property>
+  
+</rdf:RDF>

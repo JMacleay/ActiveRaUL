@@ -1,0 +1,267 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:raul="http://purl.org/NET/raul#" xmlns:dcterms="http://purl.org/dc/terms/">
+<raul:Page rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3">
+<raul:id>content</raul:id>
+<raul:list>http://w3c.org.au/raul/service/public/forms/foafedit3#widgetContainerList</raul:list>
+</raul:Page>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#widgetContainerList">
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#container"/>
+</rdf:Description>
+<raul:WidgetContainer rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#container">
+<raul:method>http://w3c.org.au/raul/service/public/forms/foafedit3#method</raul:method>
+<raul:id>foafedit</raul:id>
+<raul:list>http://w3c.org.au/raul/service/public/forms/foafedit3#containerList</raul:list>
+</raul:WidgetContainer>
+<raul:CREATEOperation rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#method"/>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#containerList">
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#me"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#update"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#title"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#firstname"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#surname"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#nick"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#email"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#homepage"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#depiction"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#phone"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#workplaceHomepage"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#workInfoHomepage"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#schoolHomepage"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#friendKnows"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#submit"/>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#me">
+<raul:label>Keyword(s)/FOAF URI:</raul:label>
+<raul:id>me</raul:id>
+<raul:name>me</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_me</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_me">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>owl:sameAs</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Button rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#update">
+<raul:id>update</raul:id>
+<raul:name>update</raul:name>
+<raul:value>update</raul:value>
+<raul:command>refExtData('me', '', '', '', '')</raul:command>
+</raul:Button>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#title">
+<raul:label>Title (Mr, Mrs, Dr, etc)</raul:label>
+<raul:id>title</raul:id>
+<raul:name>title</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_title</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_title">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:title</rdf:predicate>
+<rdf:object>adsf</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#firstname">
+<raul:label>First Name</raul:label>
+<raul:id>firstname</raul:id>
+<raul:name>firstname</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_firstname</raul:value>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_givenname</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_firstname">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:firstName</rdf:predicate>
+<rdf:object>sdfa</rdf:object>
+</rdf:Description>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_givenname">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:givenname</rdf:predicate>
+<rdf:object>sdfa</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#surname">
+<raul:label>Last Name</raul:label>
+<raul:id>surname</raul:id>
+<raul:name>surname</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_surname</raul:value>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_family_name</raul:value>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_lastname</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_surname">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:surname</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_family_name">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:family_name</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_lastname">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:lastName</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#nick">
+<raul:label>Nickname</raul:label>
+<raul:id>nick</raul:id>
+<raul:name>nick</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_nick</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_nick">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:nick</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#email">
+<raul:label>Your Email Address</raul:label>
+<raul:id>email</raul:id>
+<raul:name>email</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_email</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_email">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:mbox</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#homepage">
+<raul:label>Homepage</raul:label>
+<raul:id>homepage</raul:id>
+<raul:name>homepage</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_homepage</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_homepage">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:homepage</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#depiction">
+<raul:label>Your Picture</raul:label>
+<raul:id>depiction</raul:id>
+<raul:name>depiction</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_depiction</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_depiction">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:depiction</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#phone">
+<raul:label>Phone Number</raul:label>
+<raul:id>phone</raul:id>
+<raul:name>phone</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_phone</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_phone">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:phone</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#workplaceHomepage">
+<raul:label>Work Homepage</raul:label>
+<raul:id>workplaceHomepage</raul:id>
+<raul:name>workplaceHomepage</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_workplaceHomepage</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_workplaceHomepage">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:workplaceHomepage</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#workInfoHomepage">
+<raul:label>Page describing what you do at work</raul:label>
+<raul:id>workInfoHomepage</raul:id>
+<raul:name>workInfoHomepage</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_workInfoHomepage</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_workInfoHomepage">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:workInfoHomepage</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#schoolHomepage">
+<raul:label>School Homepage</raul:label>
+<raul:id>schoolHomepage</raul:id>
+<raul:name>schoolHomepage</raul:name>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_schoolHomepage</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_schoolHomepage">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:schoolHomepage</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:DynamicGroup rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#friendKnows">
+<raul:id>friendKnows</raul:id>
+<raul:list>http://w3c.org.au/raul/service/public/forms/foafedit3#friendKnowsList</raul:list>
+</raul:DynamicGroup>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#friendKnowsList">
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#friendFields"/>
+</rdf:Description>
+<raul:Group rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#friendFields">
+<raul:id>friendFields</raul:id>
+<raul:list>http://w3c.org.au/raul/service/public/forms/foafedit3#friendFieldsList</raul:list>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_friend_knows</raul:value>
+</raul:Group>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_friend_knows">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen</rdf:subject>
+<rdf:predicate>foaf:knows</rdf:predicate>
+<rdf:object>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen_friendFields</rdf:object>
+</rdf:Description>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#friendFieldsList">
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#friend_name"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#friend_mbox"/>
+<rdf:_ rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit3#friend_seealso"/>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#friend_name">
+<raul:label>Friend--	Name</raul:label>
+<raul:id>friend_name</raul:id>
+<raul:name>friend_name</raul:name>
+<raul:group>http://w3c.org.au/raul/service/public/forms/foafedit3#friendFields</raul:group>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_friend_name</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_friend_name">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen_friendFields</rdf:subject>
+<rdf:predicate>foaf:name</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#friend_mbox">
+<raul:label>Email</raul:label>
+<raul:id>friend_mbox</raul:id>
+<raul:name>friend_mbox</raul:name>
+<raul:group>http://w3c.org.au/raul/service/public/forms/foafedit3#friendFields</raul:group>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_friend_mbox</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_friend_mbox">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen_friendFields</rdf:subject>
+<rdf:predicate>foaf:mbox</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#friend_seealso">
+<raul:label>See Also</raul:label>
+<raul:id>friend_seealso</raul:id>
+<raul:name>friend_seealso</raul:name>
+<raul:group>http://w3c.org.au/raul/service/public/forms/foafedit3#friendFields</raul:group>
+<raul:value>http://w3c.org.au/raul/service/public/forms/foafedit3#value_friend_seealso</raul:value>
+</raul:Textbox>
+<rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#value_friend_seealso">
+<rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit3/Dr.Chen_friendFields</rdf:subject>
+<rdf:predicate>rdfs:seeAlso</rdf:predicate>
+<rdf:object>
+</rdf:object>
+</rdf:Description>
+<raul:Button rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit3#submit">
+<raul:id>Submit</raul:id>
+<raul:name>Submit</raul:name>
+<raul:value>Submit</raul:value>
+<raul:command>submitDataWrap()</raul:command>
+</raul:Button>
+</rdf:RDF>

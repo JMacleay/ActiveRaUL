@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:time="http://www.w3.org/2006/time"
+	xmlns:raul="http://purl.org/NET/raul#"
+>
+	
+  <raul:Page rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit6">
+    <raul:id>content</raul:id>
+    <raul:list>
+      http://w3c.org.au/raul/service/public/forms/foafedit6#widgetContainerList
+    </raul:list>
+  </raul:Page>
+  <rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit6#widgetContainerList">
+    <rdf:_1 rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit6#container"/>
+  </rdf:Description>
+  <raul:WidgetContainer rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit6#container">
+    <raul:method>http://w3c.org.au/raul/service/public/forms/foafedit6#method</raul:method>
+    <raul:id>foafedit</raul:id>
+    <raul:list>http://w3c.org.au/raul/service/public/forms/foafedit6#containerList</raul:list>
+  </raul:WidgetContainer>
+  <raul:CREATEOperation rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit6#method"/>
+  <rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit6#containerList">    
+    <rdf:_1 rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit6#title"/>    
+    <rdf:_2 rdf:resource="http://w3c.org.au/raul/service/public/forms/foafedit6#submit"/>
+  </rdf:Description>
+
+  <raul:Textbox rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit6#title">
+    <raul:label>Title (Mr, Mrs, Dr, etc)</raul:label>
+    <raul:id>title</raul:id>
+    <raul:name>title</raul:name>
+    <raul:value>http://w3c.org.au/raul/service/public/forms/foafedit6#value_title</raul:value>
+  </raul:Textbox>
+  <rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit6#value_title">
+    <rdf:subject>http://w3c.org.au/raul/service/public/forms/foafedit6/DrGreen</rdf:subject>
+    <rdf:predicate>foaf:title</rdf:predicate>
+    <rdf:object>MR*****************</rdf:object>
+  </rdf:Description>
+  <raul:Button rdf:about="http://w3c.org.au/raul/service/public/forms/foafedit6#submit">
+    <raul:id>Submit</raul:id>
+    <raul:name>Submit</raul:name>
+    <raul:value>Submit</raul:value>
+    <raul:command>postDataWrap()</raul:command>
+  </raul:Button>
+</rdf:RDF>

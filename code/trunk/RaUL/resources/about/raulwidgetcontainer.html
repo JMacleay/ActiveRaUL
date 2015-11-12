@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>RaUL</title>
+<link rel="stylesheet" href="../stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<body>
+
+<header><hgroup>
+<h1><a href="../index.html" rel="contents">RaUL</a></h1>
+<h2><b>Maintaining Linked Data via simple Web forms</b><a href="../index.html" rel="contents"><img src="../images/raul.jpg" alt=""></a></h2>
+</hgroup></header><nav>
+<ul>
+	<li><a href="framework.html">Framework</a></li>
+	<li><a href="lifecycle.html">How Does it Work?</a></li>
+	<li><a href="installation.html">Installation</a></li>
+</ul>
+</nav><article>
+
+        <h1>RaUL:WidgetContainer</h1>
+
+<p>A WidgetContainer groups Widgets (<a href="raultextbox.html">Textboxes</a>, <a href="raullistbox.html">Listboxes</a>, <a href="raulbutton.html">Buttons</a> etc.) together. It is similar to a form container in XHTML. In fact, the ActiveRaUL processor renders every WidgetContainer as a form in XHTML. A WidgetContainer defines, among other things, a method property to define the type of form submission and to which endpoint in the ActiveRaUL Web service it is mapped to. The ordering of the form controls in a WidgetContainer is defined with an RDF collection. When rendering the XHTML+RDFa code, the ActiveRaUL processor determines the positioning of the control elements based on this RDF collection. For example, in the productAdd form below, the product Widget is rendered first, followed by the update Widget etc.</p>
+
+<pre><code><span class="prefix">&lt;rdf:RDF	
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	
+  xmlns:raul="http://purl.org/NET/raul#"&gt;
+</span>
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#container"&gt;
+  &lt;rdf:type rdf:resource="http://purl.org/NET/raul#WidgetContainer"&gt;&lt;/rdf:type&gt;
+  &lt;raul:method>http://w3c.org.au/raul/service/public/forms/productAdd#method&lt;/raul:method&gt;
+  &lt;raul:id&gt;productAdd&gt;/raul:id&gt;
+  &lt;raul:list>http://w3c.org.au/raul/service/public/forms/productAdd#containerList&lt;/raul:list&gt;
+&lt;/rdf:Description&gt;
+
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#method"&gt;
+  &lt;rdf:type rdf:resource="http://purl.org/NET/raul#CREATEOperation"&gt;&lt;/rdf:type&gt;
+&lt;/rdf:Description&gt;
+
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#containerList"&gt;
+  &lt;rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">&lt;/rdf:type&gt;
+  &lt;rdf:_1 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#product">&lt;/rdf:_1&gt;
+  &lt;rdf:_2 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#update">&lt;/rdf:_2&gt;
+  ...	
+&lt;/rdf:Description&gt;</code></pre>
+
+</article>
+
+<aside><h2>Try it out.</h2>
+
+<p>Check out our <a href="../demo/demo.html">demo</a> to learn how ActiveRaUL works.</p>
+<h2>Install it now.</h2>
+<p>Download the latest version of ActiveRaUL from our Google Code <a href="http://code.google.com/p/activeraul/">project</a>.</p></aside>
+
+	<footer>
+		<p><a href="about/authors.html">&copy; 2012 </a> &mdash; <a href="about/authors.html">About Authors</a></p>
+	</footer>
+
+</body>
+
+</html>

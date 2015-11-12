@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:raul="http://purl.org/NET/raul#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:time="http://www.w3.org/2006/timezone"
+> 
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>Product Advertisement</title>
+<link rel="stylesheet" href="../stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+
+	<meta property="raul:title" content="Product Advertisement"/>
+	<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.json-2.2.min.js"></script> 
+	<script type="text/javascript" src="../js/jquery.rdfquery.core.min-1.0.js"></script> 
+	<script type="text/javascript" src="../js/jquery.rdfquery.rdfa.min-1.0.js"></script> 
+	<script type="text/javascript" src="../js/jquery.rdfquery.rules.min-1.0.js"></script> 
+	<link rel="stylesheet" href="../stylesheets/raul.css" />	
+	<link type="text/css" rel="Stylesheet" href="../stylesheets/blackbird.css" />
+	<script type="text/javascript">var rdfFormDef = 'productAdd.rdf';</script>
+	<script type="text/javascript" src="../js/blackbird.js"></script>
+	<script type="text/javascript" src="../js/raul_demo.js"></script>
+	<script type="text/javascript" src="../js/raul_getExtData.js"></script>
+	<script type="text/javascript" src="../js/raul.js"></script>
+	
+	<link rel="stylesheet" href="../codemirror_xml/lib/codemirror.css">	
+	<link rel="stylesheet" href="../codemirror_xml/theme/default.css">
+	<script src="../codemirror_xml/lib/codemirror.js"></script>
+	<script src="../codemirror_xml/mode/xml/xml.js"></script>	
+	<style type="text/css">.CodeMirror {width: 100%; height: 90%}</style>
+		
+	<link href="../sindice/themes/default.css" rel="stylesheet" type="text/css" />        
+    <link href="../sindice/themes/mac_os_x_custom.css" rel="stylesheet" type="text/css" />
+	<link href="../sindice/sindice.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="../sindice/lib/windows/prototype.js"></script>
+    <script type="text/javascript" src="../sindice/lib/windows/effects.js"></script>
+    <script type="text/javascript" src="../sindice/lib/windows/window.js"></script>
+    <script type="text/javascript" src="../sindice/lib/windows/window_effects.js"></script>
+    <script type="text/javascript" src="../sindice/lib/windows/debug.js"></script>
+    <script type="text/javascript" src="../sindice/window.js"></script>
+    <script type="text/javascript">
+		function sindice(data) {if (data == null){alert('Connection problem. Please check your internet connection any retry.');}else{set_search_win_content(data);}}
+    </script>
+
+
+
+
+<body>
+
+<header><hgroup>
+<h1><a href="../index.html" rel="contents">RaUL</a></h1>
+<h2><b>Maintaining Linked Data via simple Web forms</b><a href="../index.html" rel="contents"><img src="../images/raul.jpg" alt=""></a></h2>
+</hgroup></header><nav>
+<ul>
+	<li><a href="../about/framework.html">Framework</a></li>
+	<li><a href="../about/lifecycle.html">How Does it Work?</a></li>
+	<li><a href="../about/installation.html">Installation</a></li>
+</ul>
+</nav>
+
+		<div class="jquery-tabs">
+			<p><span id="tab_1">RDF</span><span id="tab_2">XHTML+RDFa</span></p>
+			<ul class="tab_1">
+				<div id="form">
+					<h2 class="processing_info" style="color:#939adc; display:none; position:absolute; right:10%;">Processing ... <img src="img/processing_icon.gif" /></h2>
+					<textarea rows="35" cols="110" id="showrdf" name="showrdf" class="xml"></textarea><br/>			
+					<input type="button" id="formcreate" value="Create Form"/>
+					<input type="hidden" id="serviceURL" name="serviceURL" /><br>			
+				</div>
+			</ul>			
+			<ul class="tab_2">
+				<div id="content">
+					<h2 class="processing_info" style="color:#939adc; display:none; position:absolute; right:10%;">Processing ... <img src="img/processing_icon.gif" /></h2>
+				</div>
+			</ul>
+		</div>
+
+
+</body>
+
+</html>

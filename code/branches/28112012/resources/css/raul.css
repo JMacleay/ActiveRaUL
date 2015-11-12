@@ -1,0 +1,143 @@
+#frame{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	background-color: #f6f6f6;
+	text-align: left;
+	position:relative;	/*added by pcc*/
+}
+hr{
+}
+
+li,ol {
+	list-style-type: none;
+} 
+
+a{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-variant: normal;
+	color: #353535;
+	padding: 2px 4px;
+}
+a:hover{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-variant: normal;
+	color: #fcfcfc;
+	text-shadow: #000 2px 2px 3px;
+	background-color: #939adc;
+	padding: 2px 4px;
+}
+#header{	
+	height: 100px;
+	background-color: #939adc;
+}
+#nav{
+	float: left;
+	background-color: #939adc;
+	width: 100%;
+	border-top: 5px solid #f6f6f6;
+	margin-bottom: 30px;
+}
+#nav ul{
+	float: left;
+	display: inline;
+	padding: 5px 0;
+	margin: 0 auto 0 20px;
+	text-align: center;
+}
+#nav li{
+	float: left;
+	width: 100px;
+	list-style-type: none;
+	margin-left: 5px;
+}
+textarea.value{
+	height: 50px;
+	width: 150px;
+}
+.submit{
+	width: 100px;
+	margin-top: 20px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-webkit-box-shadow: 4px 4px 4px #CCC;
+	border: 1px solid #200d92;
+	background-color: #939adc;
+}
+.value{
+	-webkit-box-shadow: 4px 4px 4px #CCC;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	height: 15px;
+	float: left;
+	clear: none;
+	margin: 0;
+	border: 1px solid #000;
+	text-align: center;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	width: 150px;
+}
+
+
+#content_main{
+	float: left;
+	clear: both;
+	visibility: visible;
+	overflow: auto;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+/*modified by pcc*/
+#content {
+	/*width:40%;*/
+	/*height: 530px;*/
+	float: left;
+	visibility: visible;
+	overflow: auto;	
+	/*background:#9c9;*/
+	padding-right: 30px;
+  }
+
+/*added by pcc*/
+#form {
+  	/*width:40%;*/
+	/*height: 530px;*/
+	float: right;	
+	visibility: visible;
+	overflow: auto;
+	/*background:#c9c;*/
+	padding-left: 30px;
+}
+
+
+select{
+	float: left;
+}
+.break{
+	float: left;
+	margin-top: 5px;
+	clear: left;
+}
+.key{
+	-webkit-box-shadow: 3px 3px 7px #777;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	width: 100px;
+	float: left;
+	padding-left: 10px;
+	background-color: #e8e8e8;
+	margin: 0 10px 0 0;
+	border: 1px solid #686b69;
+}
+
+#footer{
+	height: 50px;
+	background-color: #939adc;
+	float: left;
+	clear: left;
+	width: 100%;
+	margin-top: 30px;
+}

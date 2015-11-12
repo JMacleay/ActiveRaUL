@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>RaUL</title>
+<link rel="stylesheet" href="../stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<body>
+
+<header><hgroup>
+<h1><a href="../index.html" rel="contents">RaUL</a></h1>
+<h2><b>Maintaining Linked Data via simple Web forms</b><a href="../index.html" rel="contents"><img src="../images/raul.jpg" alt=""></a></h2>
+</hgroup></header><nav>
+<ul>
+	<li><a href="framework.html">Framework</a></li>
+	<li><a href="lifecycle.html">How Does it Work?</a></li>
+	<li><a href="installation.html">Installation</a></li>
+</ul>
+</nav><article>
+
+        <h1>RaUL:Listbox</h1>
+
+<p>The Listbox Widget allows the user to make one or multiple selections from a set of choices. Special properties include <i>list</i>, <i>multiple</i> and <i>row</i>. In case of the <i>row</i> and <i>multiple</i> properties the rendering in HTML is straightforward. In both cases it is rendered as a select input box displayed as a multirow selection box (row) and with the ability to select more than one value (multiple). If the <i>list</i> property is used, the Listbox needs to reference a collection of Listitems. Listitems are required to define a <i>value</i> and <i>label</i> property and can be defined as <i>checked</i>. The listing below defines a "Price Currency Option" Listbox from our <a href="../demo/productAdd.html">ProductAdd</a> example. Any Listbox must bind to an RDF collection with the same number of node elements as there are Listitems. Similar to the data binding in the Textbox we use RDF reification to associate the value for the Listbox to a predicate in an ontology, in the example below, the <a href="http://www.heppnetz.de/projects/goodrelations/">GoodRelations</a> hasCurrency property. Additionally to filling in the value of the selected Listitem to the reified <code>rdf:object</code> triple, the a <i>checked</i> property is added to the any Listitem that was selected by the user.</p>
+
+<pre><code><span class="prefix">&lt;rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	
+  xmlns:raul="http://purl.org/NET/raul#"
+  xmlns:gr="http://purl.org/goodrelations/v1#"&gt;
+</span>
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options"&gt;
+  &lt;rdf:type rdf:resource="http://purl.org/NET/raul#Listbox"&gt;&lt;/rdf:type&gt;
+  &lt;raul:id&gt;price_currency_options&lt;/raul:id&gt;
+  &lt;raul:name&gt;price_currency_options&lt;/raul:name&gt;
+  &lt;raul:list&gt;http://w3c.org.au/raul/service/public/forms/productAdd#list_price_currency_options&lt;/raul:list&gt;
+  &lt;raul:value&gt;http://w3c.org.au/raul/service/public/forms/productAdd#value_price_currency_options&lt;/raul:value&gt;
+&lt;/rdf:Description&gt;
+
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#value_price_currency_options"&gt;
+  &lt;rdf:subject&gt;&lt;/rdf:subject&gt;
+  &lt;rdf:predicate&gt;gr:hasCurrency&lt;/rdf:predicate&gt;
+  &lt;rdf:object&gt;&lt;/rdf:object&gt;
+&lt;/rdf:Description&gt;
+
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#list_price_currency_options"&gt;
+  &lt;rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"&gt;&lt;/rdf:type&gt;
+  &lt;rdf:_1 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_0"/&gt;
+  &lt;rdf:_2 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_1"/&gt;
+  ...
+&lt;/rdf:Description&gt;
+
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#price_currency_options_0"&gt;
+  &lt;rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/&gt;
+  &lt;raul:label&gt;USD&lt;/raul:label&gt;
+  &lt;raul:value&gt;USD&lt;/raul:value&gt;
+&lt;/rdf:Description&gt;</code></pre>
+
+</article>
+
+<aside><h2>Try it out.</h2>
+
+<p>Check out our <a href="../demo/demo.html">demo</a> to learn how ActiveRaUL works.</p>
+<h2>Install it now.</h2>
+<p>Download the latest version of ActiveRaUL from our Google Code <a href="http://code.google.com/p/activeraul/">project</a>.</p></aside>
+
+	<footer>
+		<p><a href="about/authors.html">&copy; 2012 </a> &mdash; <a href="about/authors.html">About Authors</a></p>
+	</footer>
+
+</body>
+
+</html>

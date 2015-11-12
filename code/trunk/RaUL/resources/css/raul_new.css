@@ -1,0 +1,153 @@
+#frame{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	background-color: #f6f6f6;
+	text-align: left;
+	position:relative;	/*added by pcc*/
+}
+hr{
+}
+
+li,ol {
+	list-style-type: none;
+} 
+
+a{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-variant: normal;
+	color: #353535;
+	padding: 2px 4px;
+}
+a:hover{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-variant: normal;
+	color: #fcfcfc;
+	text-shadow: #000 2px 2px 3px;
+	background-color: #939adc;
+	padding: 2px 4px;
+}
+#header{	
+	height: 100px;
+	background-color: #939adc;
+}
+#nav{
+	float: left;
+	background-color: #939adc;
+	width: 100%;
+	border-top: 5px solid #f6f6f6;
+	margin-bottom: 30px;
+}
+#nav ul{
+	float: left;
+	display: inline;
+	padding: 5px 0;
+	margin: 0 auto 0 20px;
+	text-align: center;
+}
+#nav li{
+	float: left;
+	width: 100px;
+	list-style-type: none;
+	margin-left: 5px;
+}
+
+input[type="button"]{
+	width: 100px;
+	margin: 10px 0 0 0;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-webkit-box-shadow: 4px 4px 4px #CCC;
+	border: 1px solid #200d92;	
+	float: left;	
+}
+
+textarea{
+	-webkit-box-shadow: 4px 4px 4px #CCC;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;	
+	float: left;
+	clear: none;
+	margin: 10px 0 10px 0;
+	border: 1px solid #000;
+	/*text-align: center;*/
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;	
+}
+
+input[type="text"]{
+	-webkit-box-shadow: 4px 4px 4px #CCC;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	float: left;
+	clear: none;
+	margin: 10px 10px 0 0;
+	border: 1px solid #000;
+	text-align: center;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	width: 150px;	
+}
+
+input[id="Submit"]{
+	float: left;
+	margin-top: 10px;
+	clear: left;
+	border: 1px solid #000;
+	background-color: #939adc;
+}
+
+input[type="radio"]{
+	float: left;
+	margin: 12.5px 10px 0 10px;
+}
+
+select{
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-webkit-box-shadow: 4px 4px 4px #CCC;
+	border: 1px solid #000;
+	float: left;
+	margin: 10px 10px 0 0;
+}
+
+span[property="raul:label"]{
+	-webkit-box-shadow: 3px 3px 7px #777;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	width: 130px;
+	float: left;
+	padding-left: 10px;
+	background-color: #e8e8e8;
+	margin: 10px 10px 0 0;
+	border: 1px solid #686b69;
+	clear: left;
+}
+
+div[typeof="raul:Radiobutton"] span:first-child {	
+	float: left;
+	clear: none;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 0;
+	width: 80;
+	border: 0;
+	background-color: transparent;
+	text-align: center;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+#footer{
+	height: 50px;
+	background-color: #939adc;
+	float: left;
+	clear: left;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.jquery-tabs{background-color:#FAFAFA;}
+.jquery-tabs p span{background-color:#EFEFEF;border:1px solid
+#CCCCCC;cursor:pointer;margin-right:2px;padding:2px 3px;}
+.jquery-tabs p span.current{background-color:#FAFAFA; border-bottom-color:#fafafa;}
+.jquery-tabs p{border-bottom:1px solid #CCCCCC;font-weight:bold;padding:0 10px 2px;}
+.jquery-tabs li{border-bottom:1px dotted #CCCCCC;padding-bottom:3px;margin:5px 0;}
+.jquery-tabs .mhot,.jquery-tabs.allhot{display:none;}

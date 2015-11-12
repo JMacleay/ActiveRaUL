@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:raul="http://purl.org/NET/raul#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:time="http://www.w3.org/2006/timezone" xml:base="http://raul.deri.ie/forms/registration">
+
+<head>
+<style type="text/css">
+   li, ol { list-style-type:none; } 
+</style>
+    <link rel="stylesheet" href="css/raul.css">
+    <meta about="#registerAccount" property="raul:title" content="Registration" />
+<title>Registration</title>
+
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.core.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rdfa.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rules.min-1.0.js"></script>
+<script type="text/javascript" src="js/blackbird.js"></script>
+<script type="text/javascript">
+
+  $(document).ready( function() {
+    $("form#register").submit(  function() {
+        var rdf = parseDom();
+
+        $("#result").find("tr:gt(0)").remove();
+        $('#result tr:last').after('<tr><td style="font: bold;">subject</td><td>predicate</td><td>object</td></tr>'); 
+        
+        rdf.where('?s ?p ?o')
+    	.each(function() {
+    		$('#result tr:last').after('<tr><td>'+this.s.value+'</td><td>'+this.p.value+'</td><td>'+this.o.value+'</td></tr>');
+    	});
+        return false;
+      });
+       });
+</script>
+<script type="text/javascript" src="js/raul.js"></script>
+  
+</head>
+
+<body>
+    <div id="frame">
+           <div id="header">
+              <h1>RaUL</h1><h2>Example of a group element</h2>
+           </div>
+            <div id="nav">
+                   <ul>
+                       <li><a href="index.html">Home</a></li>
+                       <li><a href="demo.html">Demo</a></li>
+                       </ul>
+                       </div>
+           <div id="content_main">
+    
+
+
+<form method="post" action="" id="register" >
+<div about="#registerAccount" typeof="raul:Page">
+  <span property="raul:id" content="maindiv"> </span>
+  <span property="raul:widgets" content="http://raul.deri.ie/forms/registration#registerContainer"></span>
+  
+
+ <div about="#registerContainer" typeof="raul:WidgetContainer">
+
+  <span property="raul:method" content="http://raul.deri.ie/forms/registration#postAccount"> </span>
+  <span property="raul:id" content="register" ></span>
+  <span property="raul:action" content="http://register.facebook.com/r.php"></span>
+ <span property="raul:list" content="http://raul.deri.ie/forms/registration#registerContainerList" ></span>
+
+ <div about="#postAccount" typeof="raul:CREATEOperation"></div>
+
+      <ol about="#registerContainer_list" typeof="rdf:Seq">
+        <li rel="raul:list" resource="#sex_1"></li>
+        <li rel="raul:list" resource="#sex_2"></li>
+      </ol>
+
+<p>
+<span about="valuesex">
+<span property="rdf:subject" content="http://raul.deri.ie/forms/registerAccount#123"></span>
+<span property="rdf:predicate" content="foaf:gender"></span>
+<span property="rdf:object" content=""></span>
+</span>
+</p>
+<span about="#sex" typeof="raul:Group">
+<span about="#sex_1" typeof="raul:Radiobutton" typeof="raul:Radiobutton">
+<input type="radio" name="sex" value="male"/>
+                                          <span property="raul:label">Male</span>
+										  <span property="raul:value" datatype="xsd:string" content="http://raul.deri.ie/forms/registration#valuesex"></span>
+										  <span property="raul:name" datatype="xsd:string" content="male"></span>
+										  <span property="raul:group" content="http://raul.deri.ie/forms/registration#sex"></span>
+										 </span>
+										 <span about="#sex_2" typeof="raul:Radiobutton" typeof="raul:Radiobutton">
+                                          <input type="radio" name="sex" value="female"/>
+                                          <span property="raul:label">Female</span>
+										  <span property="raul:value" datatype="xsd:string" content="http://raul.deri.ie/forms/registration#valuesex"></span>
+										  <span property="raul:name" datatype="xsd:string" content="female"></span>
+										  <span property="raul:group" content="http://raul.deri.ie/forms/registration#sex"></span>
+										 </span>
+										 </span>
+</div>
+</div>
+
+						  <input type="submit" name="submit" value="parse and show RDF"  />
+</form>		
+<table id="result">
+    <tr><td></td><td></td><td></td></tr>
+</table>
+    </div>
+    <div id="footer">
+&nbsp;
+    </div>
+</div>    
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:raul="http://purl.org/NET/raul#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:time="http://www.w3.org/2006/timezone" xml:base="http://raul.deri.ie/forms/registration">
+
+<head>
+<style type="text/css">
+   li, ol { list-style-type:none; } 
+</style>
+
+
+<title>RaUL - Example for textboxes</title>
+<meta about="#showcase" property="raul:title" content="Textbox example" />
+<link rel="stylesheet" href="css/raul.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.snippet.min.css" />
+
+<link type="text/css" rel="Stylesheet" href="css/blackbird.css" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.core.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rdfa.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rules.min-1.0.js"></script>
+<script type="text/javascript" src="js/blackbird.js"></script>
+<script type="text/javascript" src="js/jquery.snippet.min.js"> 
+</script>
+<script type="text/javascript">
+  $(document).ready( function() {
+            			    $("pre#test").snippet("html",{style:"dull"});
+ $('#submit').click(function() {
+            var rdf = parseDom();
+           log.info(rdf.databank.dump({format:'application/rdf+xml', serialize: true}));
+           $("#frame").append("<div>"+rdf.databank.dump({format:'application/rdf+xml', serialize: true})+"</div>");
+           $.ajax({
+                             type: 'POST',
+                             url: 'http://www.example.com/books/',
+                             processData: false,
+                             contentType: 'application/rdf+xml',
+                             data: rdf.dump('application/rdf+xml')
+                           });
+         
+           return false;
+         });
+      $('#show').click(function() {
+              log.info("show the parsed RDF")
+              $("#result").find("tr:gt(0)").remove();
+              var rdf = parseDom();
+
+               $("#result").find("tr:gt(0)").remove();
+                     $('#result tr:last').after('<tr><td style="font: bold;">subject</td><td>predicate</td><td>object</td></tr>'); 
+                     rdf.where('?s ?p ?o')
+                   .each(function() {
+                       $('#result tr:last').after('<tr><td>'+this.s.value+'</td><td>'+this.p.value+'</td><td>'+this.o.value+'</td></tr>');
+                   });
+                return false;
+            });
+      
+      $('#logging').click(function() {
+        log.toggle();
+      });
+  });
+</script>
+<script type="text/javascript" src="js/raul.js"></script>
+  
+</head>
+
+<body>
+    <div id="frame">
+        <div id="header">
+           <h1>RaUL</h1>
+           <h2>Example of a textbox</h2>
+        </div>
+         <div id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="widgets.html">Widgets</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    </ul>
+                    <input id="logging" type="submit" name="logging" value="logging"  />
+                    </div>
+        <div id="content_main">
+
+
+<form method="post" action="" id="showRDF">
+<h3>Simple textbox widget</h3>
+<hr>
+<span about="valuefirstname">
+<span property="rdf:subject" content="http://raul.deri.ie/forms/registerAccount#123"></span>
+<span property="rdf:predicate" content="foaf:name"></span>
+<span property="rdf:object" content=""></span>
+</span>
+</p>
+    <span about="firstname" typeof="raul:Textbox">
+	    <span property="raul:label" datatype="xsd:string">First Name:</span>
+		<input type="text" class="inputtext" id="firstname" name="firstname" value="" />
+		<span property="raul:value" content="valuefirstname"></span>
+		<span property="raul:class" datatype="xsd:string" content="inputtext"></span>
+		<span property="raul:id" datatype="xsd:string" content="firstname"></span>
+		<span property="raul:name" datatype="xsd:string" content="firstname"></span>
+	</span>
+<hr>
+<h3>HTML template for textbox widget</h3>
+<pre id="test">
+&lt;span about=&quot;firstname&quot; typeof=&quot;raul:Textbox&quot;&gt;
+    &lt;span property=&quot;raul:label&quot; datatype=&quot;xsd:string&quot;&gt;First Name:&lt;/span&gt;
+    &lt;input type=&quot;text&quot; class=&quot;inputtext&quot; id=&quot;firstname&quot; name=&quot;firstname&quot; value=&quot;&quot; /&gt;
+    &lt;span property=&quot;raul:value&quot; content=&quot;valuefirstname&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;raul:class&quot; datatype=&quot;xsd:string&quot; content=&quot;inputtext&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;raul:id&quot; datatype=&quot;xsd:string&quot; content=&quot;firstname&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;raul:name&quot; datatype=&quot;xsd:string&quot; content=&quot;firstname&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+</pre>
+<hr>
+<h3>Specify semantics of widget value</h3>
+<pre id="test">
+&lt;span about=&quot;valuefirstname&quot;&gt;
+    &lt;span property=&quot;rdf:subject&quot; content=&quot;http://raul.deri.ie/forms/registerAccount#123&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;rdf:predicate&quot; content=&quot;foaf:name&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;rdf:object&quot; content=&quot;&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+</pre>
+
+<br /><br />
+<input id="show" type="submit" name="show" value="show"  /><input id="submit" type="submit" name="submit" value="submit"  />
+</form>		
+
+<table id="result">
+    <tr><td></td><td></td><td></td></tr>
+</table>
+    </div>
+    <div id="footer">
+&nbsp;
+    </div>
+</div>    
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:owl="http://www.w3.org/2002/07/owl#"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	 xmlns:raul="http://purl.org/NET/raul#"
+	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+<head>
+	<base href="http://raul.deri.ie/forms/addproduct#addProduct"/>
+	<meta property="raul:title" content="Add Product"/>
+	<title>Add Product</title>
+</head>
+<body>
+<div about="http://raul.deri.ie/forms/addproduct#addProduct" typeof="raul:Page">
+	<span style="display:none;">
+		<span property="raul:class">maindiv</span>
+		<span property="raul:id">maindiv</span>
+		<span property="raul:list">http://raul.deri.ie/forms/addproduct#addProductWidgetContainerList</span>
+	</span>
+</div>
+<ol about="http://raul.deri.ie/forms/addproduct#addProductWidgetContainerList">
+	<li rel="rdf:_1" resource="http://raul.deri.ie/forms/addproduct#addProductContainer"></li>
+</ol>
+<div about="http://raul.deri.ie/forms/addproduct#addProductContainer" typeof="raul:WidgetContainer">
+	<span style="display:none;">
+		<span property="raul:methods">http://raul.deri.ie/forms/addproduct#postProduct</span>
+		<span property="raul:action"></span>
+		<span property="raul:class">addProduct</span>
+		<span property="raul:id">addProduct</span>
+		<span property="raul:list">http://raul.deri.ie/forms/addproduct#addProductContainerList</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#postProduct" typeof="raul:CREATEOperation">
+</div>
+<form method="post" action="" id="addProduct" class="addProduct">
+<ol about="http://raul.deri.ie/forms/addproduct#addProductContainerList">
+	<li rel="rdf:_1" resource="http://raul.deri.ie/forms/addproduct#product_name"></li>
+	<li rel="rdf:_2" resource="http://raul.deri.ie/forms/addproduct#product_description"></li>
+	<li rel="rdf:_3" resource="http://raul.deri.ie/forms/addproduct#product_image"></li>
+	<li rel="rdf:_4" resource="http://raul.deri.ie/forms/addproduct#transaction_type"></li>
+	<li rel="rdf:_5" resource="http://raul.deri.ie/forms/addproduct#product_price"></li>
+	<li rel="rdf:_6" resource="http://raul.deri.ie/forms/addproduct#price_currency"></li>
+	<li rel="rdf:_7" resource="http://raul.deri.ie/forms/addproduct#submit"></li>
+</ol>
+<div about="http://raul.deri.ie/forms/addproduct#product_name" typeof="raul:Textbox">
+		<span property="raul:label">Product Name:</span>
+	<span style="display:none;">
+		<span property="raul:class">inputtext</span>
+		<span property="raul:id">product_name</span>
+		<span property="raul:value">http://raul.deri.ie/forms/addproduct#valueproduct_name</span>
+	</span>
+</div>
+<div style="display:none;">
+	<span property="rdf:subject">http://raul.deri.ie/forms/addproduct#123</span>
+	<span property="rdf:predicate">rdfs:label</span>
+	<span property="rdf:object"></span>
+</div>
+<div>
+<input type="text" class="inputtext" id="product_name"/>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#product_description" typeof="raul:Textbox">
+		<span property="raul:label">Product Description:</span>
+	<span style="display:none;">
+		<span property="raul:class">inputtext</span>
+		<span property="raul:id">product_description</span>
+		<span property="raul:value">http://raul.deri.ie/forms/addproduct#valueproduct_description</span>
+	</span>
+</div>
+<div style="display:none;">
+	<span property="rdf:subject">http://raul.deri.ie/forms/addproduct#123</span>
+	<span property="rdf:predicate">rdfs:comment</span>
+	<span property="rdf:object"></span>
+</div>
+<div>
+<textarea class="inputtext" id="product_description" rows="4" cols="50"></textarea>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#product_image" typeof="raul:Textbox">
+	<span style="display:none;">
+		<span property="raul:class">inputtext</span>
+		<span property="raul:id">product_image</span>
+		<span property="raul:value">http://raul.deri.ie/forms/addproduct#valueproduct_image</span>
+	</span>
+</div>
+<div style="display:none;">
+	<span property="rdf:subject">http://raul.deri.ie/forms/addproduct#123</span>
+	<span property="rdf:predicate">foaf:depiction</span>
+	<span property="rdf:object"></span>
+</div>
+<div>
+<input type="text" class="inputtext" id="product_image"/>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#transaction_type" typeof="raul:Listbox">
+	<span style="display:none;">
+		<span property="raul:id">transaction_type</span>
+		<span property="raul:value">http://raul.deri.ie/forms/addproduct#valuetransaction_type</span>
+		<span property="raul:list">http://raul.deri.ie/forms/addproduct#transaction_type_options</span>
+	</span>
+</div>
+<ol about="http://raul.deri.ie/forms/addproduct#transaction_type_options">
+	<li rel="rdf:_1" resource="http://raul.deri.ie/forms/addproduct#transaction_type_1"></li>
+	<li rel="rdf:_2" resource="http://raul.deri.ie/forms/addproduct#transaction_type_2"></li>
+	<li rel="rdf:_3" resource="http://raul.deri.ie/forms/addproduct#transaction_type_3"></li>
+	<li rel="rdf:_4" resource="http://raul.deri.ie/forms/addproduct#transaction_type_4"></li>
+	<li rel="rdf:_5" resource="http://raul.deri.ie/forms/addproduct#transaction_type_5"></li>
+</ol>
+<div about="http://raul.deri.ie/forms/addproduct#transaction_type_1" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">Lease Out</span>
+		<span property="raul:value">#gr:LeaseOut</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#transaction_type_2" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">Maintain</span>
+		<span property="raul:value">#gr:Maintain</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#transaction_type_3" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">Provide Service</span>
+		<span property="raul:value">#gr:ProvideService</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#transaction_type_4" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">Repair</span>
+		<span property="raul:value">#gr:Repair</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#transaction_type_5" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">Sell</span>
+		<span property="raul:value">#gr:Sell</span>
+	</span>
+</div>
+<div>
+	<select id="transaction_type">
+		<option value="#gr:LeaseOut">Lease Out</option>
+		<option value="#gr:Maintain">Maintain</option>
+		<option value="#gr:ProvideService">Provide Service</option>
+		<option value="#gr:Repair">Repair</option>
+		<option value="#gr:Sell">Sell</option>
+	</select>
+</div><div about="http://raul.deri.ie/forms/addproduct#product_price" typeof="raul:Textbox">
+	<span style="display:none;">
+		<span property="raul:class">inputtext</span>
+		<span property="raul:id">product_price</span>
+		<span property="raul:value">http://raul.deri.ie/forms/addproduct#valueproduct_price</span>
+		<span property="raul:hidden" datatype="xsd:boolean">true</span>
+	</span>
+</div>
+<div style="display:none;">
+	<span property="rdf:subject">http://raul.deri.ie/forms/addproduct#123</span>
+	<span property="rdf:predicate">gr:hasCurrency</span>
+	<span property="rdf:object"></span>
+</div>
+<div>
+<input type="hidden" class="inputtext" id="product_price"/>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#price_currency" typeof="raul:Listbox">
+	<span style="display:none;">
+		<span property="raul:id">price_currency</span>
+		<span property="raul:value">http://raul.deri.ie/forms/addproduct#valueprice_currency</span>
+		<span property="raul:list">http://raul.deri.ie/forms/addproduct#price_currency_options</span>
+		<span property="raul:selected">http://raul.deri.ie/forms/addproduct#price_currency_2</span>
+	</span>
+</div>
+<ol about="http://raul.deri.ie/forms/addproduct#price_currency_options">
+	<li rel="rdf:_1" resource="http://raul.deri.ie/forms/addproduct#price_currency_1"></li>
+	<li rel="rdf:_2" resource="http://raul.deri.ie/forms/addproduct#price_currency_2"></li>
+	<li rel="rdf:_3" resource="http://raul.deri.ie/forms/addproduct#price_currency_3"></li>
+	<li rel="rdf:_4" resource="http://raul.deri.ie/forms/addproduct#price_currency_4"></li>
+	<li rel="rdf:_5" resource="http://raul.deri.ie/forms/addproduct#price_currency_5"></li>
+	<li rel="rdf:_6" resource="http://raul.deri.ie/forms/addproduct#price_currency_6"></li>
+</ol>
+<div about="http://raul.deri.ie/forms/addproduct#price_currency_1" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">USD</span>
+		<span property="raul:value">USD</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#price_currency_2" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">EUR</span>
+		<span property="raul:value">EUR</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#price_currency_3" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">JPY</span>
+		<span property="raul:value">JPY</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#price_currency_4" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">GBP</span>
+		<span property="raul:value">GBP</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#price_currency_5" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">AUD</span>
+		<span property="raul:value">AUD</span>
+	</span>
+</div>
+<div about="http://raul.deri.ie/forms/addproduct#price_currency_6" typeof="raul:Listitem">
+	<span style="display:none;">
+		<span property="raul:label">CHF</span>
+		<span property="raul:value">CHF</span>
+	</span>
+</div>
+<div>
+	<select id="price_currency">
+		<option value="USD">USD</option>
+		<option value="EUR">EUR</option>
+		<option value="JPY">JPY</option>
+		<option value="GBP">GBP</option>
+		<option value="AUD">AUD</option>
+		<option value="CHF">CHF</option>
+	</select>
+</div><div about="http://raul.deri.ie/forms/addproduct#submit" typeof="raul:Button">
+		<span property="raul:label">submit</span>
+	<span style="display:none;">
+		<span property="raul:command">parseDom(rdf)</span>
+		<span property="raul:checked" datatype="xsd:boolean">false</span>
+	</span>
+</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+owl-compiler -j raul-ontology.jar rdf.rdf rdf-schema.rdf ../../raul.rdf

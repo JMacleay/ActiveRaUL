@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>RaUL</title>
+<link rel="stylesheet" href="../stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<body>
+
+<header><hgroup>
+<h1><a href="../index.html" rel="contents">RaUL</a></h1>
+<h2><b>Maintaining Linked Data via simple Web forms</b><a href="../index.html" rel="contents"><img src="../images/raul.jpg" alt=""></a></h2>
+</hgroup></header><nav>
+<ul>
+	<li><a href="framework.html">Framework</a></li>
+	<li>How Does it Work?</li>
+	<li><a href="installation.html">Installation</a></li>
+</ul>
+</nav><article>
+
+        <h1>Web form deployment lifecycle</h1>
+
+The setup of the ActiveRaUL framework requires three steps:
+
+<ul>
+               <li><a href="deployment">ActiveRaUL Deployment</a></li>
+<li><a href="modelling">Web form modelling and deployment</a></li>
+               <li><a href="client">Client configuration</a></li>
+
+            </ul>
+
+        <h2><a id="deployment">ActiveRaUL Deployment</a></h2>
+
+<p>ActiveRaUL is implemented as a RESTful Web service using the JAX-RS library and can be deployed in any servlet container. Before deployment of the Web application ARchive (WAR) file the only change to be made is to add the location of the local RDF database to the web.xml deployment descriptor. After deployment the ActiveRaUL Web service is ready for use, either over a browser or with any tool that supports HTTP requests. However, interactivng with ActiveRaUL over a browers requires the Client-side JavaScript API as described <a href="#client">below</a>.</p>
+        <h2><a id="modelling">Web form modelling and deployment</a></h2>
+
+
+<p>A RaUL Web form template has to be deployed with the ActiveRaUL Web service with a POST call to the ActiveRaUL service with the RDF model of the Web form as a message payload. Below an example how this can be done using CURL. You can download the foafedit.rdf file for use in the below command from <a href="../foafedit.rdf">here</a>.
+
+<pre><code>curl --data-binary "@C:\foafedit.rdf" -H "Content-Type:application/rdf+xml; charset=UTF-8"  http://w3c.org.au/raul/service/public/forms</code></pre>
+
+<p>If the POST request is successful, the service will return the URL of the newly created form in the HTTP Location header of the response, for example, /public/forms/foafedit. Web form templates modelled in RaUL are reusable RDF graphs which are assigned a URI. They can easily be reused, and ideally, RaUL Web form templates, created and published by an ontology engineer, may become part of the Linked Data Web.</p>
+
+<h2><a id="client">Client configuration</a></h2>
+
+<p>There are two ways to use a RaUL Web form in a browser. Depending on the existence of the Page class in the RaUL form model, either an entire HTML page, or a widget that is embeded in a &lt;div&gt; tag is rendered. If a Page class is present, a whole HTML page will be rendered, including the JavaScript libraries needed for the communication with ActiveRaUL. If it is not present and only the rendering of a widget is preferred to have more freedom in the design of the Web form structure and its surrounding page, the RaUL JavaScript libraries have to be manually included in the header of the page.</p>
+
+<h1><a id="use">Web form usage</a></h1>
+
+<p>A client, either a human or an agent, can access and manipulate Web forms over the ActiveRaUL service. Typically, the access will be over a Web browser, displaying the rendered Web form in XHTML+RDFa as returned by ActiveRaUL. When a user fills out a form and submits it, the client-side JavaScript API processes the form, updates the data model with the user input data and calls the method of the ActiveRaUL service defined in the form model. The payload contains the RDF triples that represents the data. The ActiveRaUL service will process the request, insert the data in the RDF triple store and sent the HTTP Location header back to the client. It contains the URL of the newly created resource that represents the from submission data, for example, /public/forms/foafedit/101. The ActiveRaUL service dynamically assigns an id, such as 101 in this example. This uniquely identified data can then be accessed also independently of the form model.</p>
+
+<h2>Data Reuse</h2>
+
+<p>One of the great frustrations in Web user experience is providing the same information, such as personal information or address details over and over again. One of the principles of the Semantic Web is data reuse. If data
+already exists elsewhere on the Web as Linked Data, it can be reused within RaUL Web forms. If the Web form widget includes an update form control, it can be used to retrieve data from anywhere on the Linked Data Web. There are two ways for the Web user to provide a reference to external data. Either, by typing in the URL of the resource or by typing in a search term. The ActiveRaUL client-side JS API uses the Sindice API, a semantic web index, to find the applicable RDF graph based on the search term. In either case, the RDFa API retrieves the data from the resulting URI and prefills the remaining form controls at runtime with the data from this resource. The update of the form controls
+is done by querying the received RDF for the object values of the predicates defined in the reified triple of the widget, which are then replaced with each successful query result.</p>
+
+</article>
+
+<aside><h2>Try it out.</h2>
+
+<p>Check out our <a href="../demo/demo.html">demo</a> to learn how ActiveRaUL works.</p>
+<h2>Install it now.</h2>
+<p>Download the latest version of ActiveRaUL from our Google Code <a href="http://code.google.com/p/activeraul/">project</a>.</p></aside>
+
+	<footer>
+		<p><a href="about/authors.html">&copy; 2012 </a> &mdash; <a href="about/authors.html">About Authors</a></p>
+	</footer>
+
+</body>
+
+</html>

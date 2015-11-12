@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct">
+	<dcterms:title>Add Product</dcterms:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#buyProduct">
+	<title xmlns="http://purl.org/NET/raul#">Buy Product</title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#buyProduct">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Page"/>
+	<id xmlns="http://purl.org/NET/raul#">maindiv</id>
+	<widgets xmlns="http://purl.org/NET/raul#">http://raul.deri.ie/forms/buyproduct#buyProductContainer</widgets>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#buyProductContainer">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#WidgetContainer"/>
+	<method xmlns="http://purl.org/NET/raul#">http://raul.deri.ie/forms/buyproduct#postProduct</method>
+
+	<id xmlns="http://purl.org/NET/raul#">buyProduct</id>
+	<action xmlns="http://purl.org/NET/raul#"></action>
+	<list xmlns="http://purl.org/NET/raul#">http://raul.deri.ie/forms/buyproduct#buyProductContainerList</list>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#postProduct">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#CREATEOperation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#buyProductContainerList">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+
+	<list xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#product_name"/>
+	<list xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#product_description"/>
+	<list xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#product_amount"/>
+	<list xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#transaction_type"/>
+	<list xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#product_price"/>
+	<list xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#price_currency"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#valueproduct_name">
+	<rdf:subject>http://raul.deri.ie/forms/buyproduct#123</rdf:subject>
+
+	<rdf:predicate>rdfs:label</rdf:predicate>
+	<rdf:object>Sony Bravia LX900</rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#valueproduct_description">
+	<rdf:subject>http://raul.deri.ie/forms/buyproduct#123</rdf:subject>
+	<rdf:predicate>rdfs:comment</rdf:predicate>
+	<rdf:object>LCD Television</rdf:object>
+
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#valueproduct_amount">
+	<rdf:subject>http://raul.deri.ie/forms/buyproduct#123</rdf:subject>
+	<rdf:predicate>gr:amountOfThisGood</rdf:predicate>
+	<rdf:object></rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#valuetransaction_type">
+	<rdf:subject>http://raul.deri.ie/forms/buyproduct#123</rdf:subject>
+
+	<rdf:predicate>gr:hasBusinessFunction</rdf:predicate>
+	<rdf:object>Buy</rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#valueproduct_price">
+	<rdf:subject>http://raul.deri.ie/forms/buyproduct#123</rdf:subject>
+	<rdf:predicate>gr:hasCurrency</rdf:predicate>
+	<rdf:object>USD</rdf:object>
+
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#valueprice_currency">
+	<rdf:subject>http://raul.deri.ie/forms/buyproduct#123</rdf:subject>
+	<rdf:predicate>gr:hasUnitOfMeasurement</rdf:predicate>
+	<rdf:object>#price_currency_1</rdf:object>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#product_name">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"/>
+
+	<label xmlns="http://purl.org/NET/raul#">Product Name:</label>
+	<value xmlns="http://purl.org/NET/raul#">#valueproduct_name</value>
+	<class xmlns="http://purl.org/NET/raul#">inputtext</class>
+	<id xmlns="http://purl.org/NET/raul#">product_name</id>
+	<disabled xmlns="http://purl.org/NET/raul#">true</disabled>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#product_description">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"/>
+	<label xmlns="http://purl.org/NET/raul#">Product Description:</label>
+	<value xmlns="http://purl.org/NET/raul#">#valueproduct_description</value>
+	<class xmlns="http://purl.org/NET/raul#">inputtext</class>
+	<id xmlns="http://purl.org/NET/raul#">product_description</id>
+	<row xmlns="http://purl.org/NET/raul#">4</row>
+
+	<size xmlns="http://purl.org/NET/raul#">50</size>
+	<disabled xmlns="http://purl.org/NET/raul#">true</disabled>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#product_amount">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"/>
+	<value xmlns="http://purl.org/NET/raul#">#valueproduct_amount</value>
+	<class xmlns="http://purl.org/NET/raul#">inputtext</class>
+
+	<id xmlns="http://purl.org/NET/raul#">product_amount</id>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#transaction_type">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"/>
+	<value xmlns="http://purl.org/NET/raul#">#valuetransaction_type</value>
+	<class xmlns="http://purl.org/NET/raul#">inputtext</class>
+	<id xmlns="http://purl.org/NET/raul#">transaction_type</id>
+
+	<disabled xmlns="http://purl.org/NET/raul#">true</disabled>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#product_price">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Textbox"/>
+	<value xmlns="http://purl.org/NET/raul#">#valueproduct_price</value>
+	<class xmlns="http://purl.org/NET/raul#">inputtext</class>
+	<id xmlns="http://purl.org/NET/raul#">product_price</id>
+
+	<disabled xmlns="http://purl.org/NET/raul#">true</disabled>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#price_currency">
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listbox"/>
+	<id xmlns="http://purl.org/NET/raul#">transaction_type</id>
+	<value xmlns="http://purl.org/NET/raul#">#valueprice_currency</value>
+	<options xmlns="http://purl.org/NET/raul#">http://raul.deri.ie/forms/buyproduct#price_currency_options</options>
+
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#price_currency_options">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+	<options xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#price_currency_1"/>
+	<options xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#price_currency_2"/>
+	<options xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#price_currency_3"/>
+	<options xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#price_currency_4"/>
+	<options xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#price_currency_5"/>
+	<options xmlns="http://purl.org/NET/raul#" rdf:resource="http://raul.deri.ie/forms/buyproduct#price_currency_6"/>
+
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#price_currency_1">
+	<label xmlns="http://purl.org/NET/raul#">USD</label>
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<value xmlns="http://purl.org/NET/raul#">USD</value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#price_currency_2">
+	<label xmlns="http://purl.org/NET/raul#">EUR</label>
+
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<value xmlns="http://purl.org/NET/raul#">EUR</value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#price_currency_3">
+	<label xmlns="http://purl.org/NET/raul#">JPY</label>
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<value xmlns="http://purl.org/NET/raul#">JPY</value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#price_currency_4">
+	<label xmlns="http://purl.org/NET/raul#">GBP</label>
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<value xmlns="http://purl.org/NET/raul#">GBP</value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#price_currency_5">
+	<label xmlns="http://purl.org/NET/raul#">AUD</label>
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+
+	<value xmlns="http://purl.org/NET/raul#">AUD</value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#price_currency_6">
+	<label xmlns="http://purl.org/NET/raul#">CHF</label>
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Listitem"/>
+	<value xmlns="http://purl.org/NET/raul#">CHF</value>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://raul.deri.ie/forms/buyproduct#submit">
+
+	<rdf:type rdf:resource="http://purl.org/NET/raul#Button"/>
+	<command xmlns="http://purl.org/NET/raul#">parseDom(rdf)</command>
+	<label xmlns="http://purl.org/NET/raul#">submit</label>
+</rdf:Description>
+
+</rdf:RDF>

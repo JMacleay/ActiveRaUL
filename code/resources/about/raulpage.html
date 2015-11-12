@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>RaUL</title>
+<link rel="stylesheet" href="../stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<body>
+
+<header><hgroup>
+<h1><a href="../index.html" rel="contents">RaUL</a></h1>
+<h2><b>Maintaining Linked Data via simple Web forms</b><a href="../index.html" rel="contents"><img src="../images/raul.jpg" alt=""></a></h2>
+</hgroup></header><nav>
+<ul>
+	<li><a href="framework.html">Framework</a></li>
+	<li><a href="lifecycle.html">How Does it Work?</a></li>
+	<li><a href="installation.html">Installation</a></li>
+</ul>
+</nav><article>
+
+        <h1>RaUL:Page</h1>
+
+<p>There are two ways to use a RaUL Web form in a browser. Depending on the existence of the Page class in the RaUL form model, either an entire HTML page, or a widget that is embeded in a &lt;div&gt; tag is rendered. If an entire page is rendered, the Web developer does not need to change anything for the client rendering. ActiveRaUL will include the reference to the required JavaScript libraries in the rendering of the HTML page. However, following this approach, the Web developer is limited in the design of the page to the changes possibly through CSS.</p>
+<p>The Page class constitutes the main container of a RaUL document. In case of the mapping to XHTML a Page instance maps to a <body> element. The Page class defines some common attributes such as class, id and title. The class and id attribute can be used to bind a CSS style identifier to specify the display size of a form control. A Page can contain one or many WidgetContainers. Below an example of how to use the Page class.</p>
+
+<pre><code><span class="prefix">&lt;rdf:RDF	
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	
+	xmlns:raul="http://purl.org/NET/raul#"&gt;
+</span>
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd"&gt;
+	&lt;rdf:type rdf:resource="http://purl.org/NET/raul#Page"&gt;&lt;/rdf:type&gt;
+	&lt;raul:id&gt;content&lt;/raul:id&gt;
+	&lt;raul:list&gt;http://w3c.org.au/raul/service/public/forms/productAdd#widgetContainerList&lt;/raul:list&gt;
+&lt;/rdf:Description&gt;
+
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#widgetContainerList"&gt;
+	&lt;rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"&gt;&lt;/rdf:type&gt;
+	&lt;rdf:_1 rdf:resource="http://w3c.org.au/raul/service/public/forms/productAdd#container"&gt;&lt;/rdf:_1&gt;
+&lt;/rdf:Description>
+</code></pre>
+
+</article>
+
+<aside><h2>Try it out.</h2>
+
+<p>Check out our <a href="../demo/demo.html">demo</a> to learn how ActiveRaUL works.</p>
+<h2>Install it now.</h2>
+<p>Download the latest version of ActiveRaUL from our Google Code <a href="http://code.google.com/p/activeraul/">project</a>.</p></aside>
+
+	<footer>
+		<p><a href="about/authors.html">&copy; 2012 </a> &mdash; <a href="about/authors.html">About Authors</a></p>
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>RaUL</title>
+<link rel="stylesheet" href="../stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<body>
+
+<header><hgroup>
+<h1><a href="../index.html" rel="contents">RaUL</a></h1>
+<h2><b>Maintaining Linked Data via simple Web forms</b><a href="../index.html" rel="contents"><img src="../images/raul.jpg" alt=""></a></h2>
+</hgroup></header><nav>
+<ul>
+	<li>Framework</li>
+	<li><a href="lifecycle.html">How Does it Work?</a></li>
+	<li><a href="installation.html">Installation</a></li>
+</ul>
+</nav><article>
+
+        <h1>Overview</h1>
+The ActiveRaUL system consists of two main components:
+<ul>
+               <li><b>The <u>R</u>DF<u>a</u> <u>U</u>ser Interface <u>L</u>anguage (RaUL)</b>, a user interface markup ontology that can be used to describe the structure
+of a Web form as RDF statements.</li>
+               <li>The <b>ActiveRaUL RESTful Web service</b>, that coupled with a generic client servlet,
+generates a user interface model for semantic Web applications.</li>
+            </ul>
+        <h2><a id="raul">RaUL Ontology</a></h2>
+
+<p>The RDFa User Interface Language provides a standard set of visual controls that are similar to the form controls found in HTML. The RaUL markup separates the control elements of a web form from the data the form controls operate on. A data binding mechanism maps this data, expressed as RDF triples, to a form and its controls. The seperation of the form controls from the data makes RaUL forms more tractable by referencing values in the form controls with concepts defined in an ontology. It also eases reuse of forms, since the underlying essential part of a form (the data expressed in RDF) is no longer irretrievably bound to the page it is used in. Further, the RDF data maintained by the Web form can be accessed independently of the form.</p>
+
+<p>Some of the main concepts in the RaUL widget ontology are:</p>
+        <ul>
+            <li>
+                <a href="raulpage.html">raul:Page</a>
+            </li>
+            <li>
+                <a href="raulwidgetcontainer.html">raul:WidgetContainer</a>
+            </li>
+            <li>
+                <a href="raultextbox.html">raul:Textbox</a>
+            </li>
+            <li>
+                <a href="raullistbox.html">raul:Listbox</a>
+            </li>
+            <li>
+                <a href="raulbutton.html">raul:Button</a>
+            </li>
+         </ul>
+
+<p>The full ontology can be found at: <a href="http://purl.org/NET/raul#">http://purl.org/NET/raul#</a>.</p>
+
+
+        <h2><a id="activeraul">ActiveRaUL</a></h2>
+
+<p>The ActiveRaUL service supports CRUD operations, such as storing and querying RDF data, on the underlying RDF data via HTTP requests. Additionally, the service provides a mechanism to produce and
+render web forms in RDF. These form instances can be rendered in many different RDF serialisations, among them, an XHTML+RDFa version that is used for display in the browser. A <b>Client-side JavaScript RDFa API</b> based on jQuery enables the direct interaction between the user (or more precisely the generated web forms) and the ActiveRaUL service. The API supports RDFa parsing of the annotated XHTML forms
+and encapsulates the communication with the backend service.</p>
+
+<p>Using ActiveRaUL is easy, because:</p>
+<ul>
+	<li>ActiveRaUL loves <strong>resource-oriented</strong> <em>(REST)</em> APIs and 
+	their <strong>hypermedia links</strong> (see for the REST endpoints below).</li>
+	<li>You don't need new tools, since <strong>your browser</strong> can interact with ActiveRaUL.</li>
+	<li>Limited RDF knowledge required, because RaUL web forms can be generated from ontologies automatically. Also, standard RDF Web forms should become ubiquitous on the Linked data Web and ready for you to be reused.</li>
+</ul>
+
+<h2>Web Service Interface</h2>
+
+
+<p>The ActiveRaUL service offers HTTP resources to create, update and delete RaUL-based Web form widgets and their associated RDF data. The Web service manages the assignment of URIs to the submitted resources and returns the URL in the HTTP Location header of the response, for example, /public/forms/registeruser. We refer to these identifiers as <i>formid</i> in the table below. For the data submitted for a Web form, the ActiveRaUL service also assigns a URI, such as /public/forms/registeruser/arminhaller. We refer to these identifers as <i>dataid</i> in the table below.</p>
+
+<p>The following table summarises all HTTP resources of the ActiveRaUL Web service together with their functionality and return values.</p>
+
+<table>
+<tr><th style="width: 30%;">CRUD Operation</th><th style="width: 20%;">HTTP Request</th><th style="width: 50%;">Web Service Path</th></tr>	   
+<tr><td>Create a form</td><td>POST</td><td>/{userid}/forms</td></tr>
+<tr><td>Create a data instance</td><td>POST</td><td>/{userid}/forms/{formid}</td></tr>	   
+<tr><td>Read an existing form</td><td>GET</td><td>/{userid}/forms/{formid}</td></tr>	   
+<tr><td>Read a data instance</td><td>GET</td><td>/{userid}/forms/{formid}/{dataid}</td></tr>	   
+<tr><td>Update a form</td><td>PUT</td><td>/{userid}/forms/{formid}</td></tr>	   
+<tr><td>Update an data instance</td><td>PUT</td><td>/{userid}/forms/{formid}/{dataid}</td></tr>	   
+<tr><td>Delete an existing form</td><td>DELETE</td><td>/{userid}/forms/{formid}</td></tr>	   
+<tr><td>Delete an existing data instance</td><td>DELETE</td><td>/{userid}/forms/{formid}/{dataid}</td></tr>	 
+</table>
+
+
+</article>
+
+<aside><h2>Try it out.</h2>
+
+<p>Check out our <a href="../demo/demo.html">demo</a> to learn how ActiveRaUL works.</p>
+<h2>Install it now.</h2>
+<p>Download the latest version of ActiveRaUL from our Google Code <a href="http://code.google.com/p/activeraul/">project</a>.</p></aside>
+
+	<footer>
+		<p><a href="about/authors.html">&copy; 2012 </a> &mdash; <a href="about/authors.html">About Authors</a></p>
+	</footer>
+
+</body>
+
+</html>

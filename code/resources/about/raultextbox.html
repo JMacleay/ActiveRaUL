@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>RaUL</title>
+<link rel="stylesheet" href="../stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<body>
+
+<header><hgroup>
+<h1><a href="../index.html" rel="contents">RaUL</a></h1>
+<h2><b>Maintaining Linked Data via simple Web forms</b><a href="../index.html" rel="contents"><img src="../images/raul.jpg" alt=""></a></h2>
+</hgroup></header><nav>
+<ul>
+	<li><a href="framework.html">Framework</a></li>
+	<li><a href="lifecycle.html">How Does it Work?</a></li>
+	<li><a href="installation.html">Installation</a></li>
+</ul>
+</nav><article>
+
+        <h1>RaUL:Textbox</h1>
+
+<p>Textbox form controls allow free-form data entry and map to an input box of type text in the XHTML rendering. Properties of the Textbox are, <i>disabled</i>, <i>hidden</i>, <i>isPassword</i>, <i>maxlength</i>, <i>row</i> and <i>size</i>. These properties are straightforwardly mapped to their equivalents in the XHTML model.</p>
+
+<p>The actual binding of the data submitted through the Textbox to concepts in an RDF ontology is realised via reification within RDF. Reification in RDF describes the ability to treat a statement as a resource, and hence to make assertions about that statement. Fig. 4 shows, for example, how the Product Name Textbox Widget references the RDF triple representing the corresponding underlying data element (i.e., &lt;http://...&gt;&lt;gr:name&gt; &lt;''&gt;). The <code>rdf:subject</code> triple references the URI assigned by the ActiveRaUL service for the instance graph, the <code>rdf:predicate</code> triple is a reference to the URI of a standard Web ontology property, in this case the <a href="http://www.heppnetz.de/projects/goodrelations/">GoodRelations</a> name property, and the <code>rdf:object</code> triple is a reference to the value that can be edited by the Textbox form control. Empty <code>rdf:object</code> fields serve as place-holders and are filled at runtime by the ActiveRaUL client-side JavaScript library with the user input.<p>
+
+<pre><code><span class="prefix">&lt;rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	
+  xmlns:raul="http://purl.org/NET/raul#"
+  xmlns:gr="http://purl.org/goodrelations/v1#"&gt;
+</span>
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#product_name"&gt;
+  &lt;rdf:type rdf:resource="http://purl.org/NET/raul#Textbox">&lt;/rdf:type&gt;
+  &lt;raul:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"&gt;Product Name:&lt;/raul:label&gt;
+  &lt;raul:id&gt;product_name&lt;/raul:id&gt;
+  &lt;raul:name&gt;product_name&lt;/raul:name&gt;
+  &lt;raul:value&gt;http://w3c.org.au/raul/service/public/forms/productAdd#value_product_name&lt;/raul:value&gt;
+&lt;/rdf:Description&gt;
+
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#value_product_name"&gt;
+  &lt;rdf:subject&gt;&lt;/rdf:subject&gt;
+  &lt;rdf:predicate&gt;gr:name&lt;/rdf:predicate&gt;
+  &lt;rdf:object&gt;&lt;/rdf:object&gt;
+&lt;/rdf:Description&gt;</code></pre>
+
+</article>
+
+<aside><h2>Try it out.</h2>
+
+<p>Check out our <a href="../demo/demo.html">demo</a> to learn how ActiveRaUL works.</p>
+<h2>Install it now.</h2>
+<p>Download the latest version of ActiveRaUL from our Google Code <a href="http://code.google.com/p/activeraul/">project</a>.</p></aside>
+
+	<footer>
+		<p><a href="about/authors.html">&copy; 2012 </a> &mdash; <a href="about/authors.html">About Authors</a></p>
+	</footer>
+
+</body>
+
+</html>

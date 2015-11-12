@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<title>RaUL</title>
+<link rel="stylesheet" href="../stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<body>
+
+<header><hgroup>
+<h1><a href="../index.html" rel="contents">RaUL</a></h1>
+<h2><b>Maintaining Linked Data via simple Web forms</b><a href="../index.html" rel="contents"><img src="../images/raul.jpg" alt=""></a></h2>
+</hgroup></header><nav>
+<ul>
+	<li><a href="framework.html">Framework</a></li>
+	<li><a href="lifecycle.html">How Does it Work?</a></li>
+	<li><a href="installation.html">Installation</a></li>
+</ul>
+</nav><article>
+
+        <h1>RaUL:Button</h1>
+
+<p>The Button form control is used for triggering or non-triggering actions. Beyond the common attributes inherited from the Widget superclass the Button class defines the following properties, <i>checked</i>, <i>command</i>, <i>disabled</i> and <i>group</i>. The mapping to HTML creates either a normal push button (ie. an input field of type button) or a submit button in case the command property is set to "submit". A submit button is used to trigger the action defined in the form element. The Button class has two subclasses in the RaUL vocabulary, a Radiobutton and a Checkbox. They are mapped to input controls of type radio or of type checkbox, respectively. To group buttons together and determine the selected values, the group property of the Button class can be used.<br />
+
+For the data binding a similar restriction to the one of <a href="raullistbox.html">Listboxes</a> applies. Any Group of Buttons, ie. either Radiobuttons or Checkboxes, which values are not literals, must bind to an RDF collection with the same number of node elements as there are Buttons in the respective group. After submission of the Button control element the checked property is set for all selected Checkboxes or Radiobuttons.<br/>
+
+The listing below shows the submit button from our ProductAdd example. The <code>raul:command</code> property is set to the <code>submitDataWrap()</code> method in the ActiveRaUL Client-side library.</p>
+
+<pre><code><span class="prefix">&lt;rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"	
+  xmlns:raul="http://purl.org/NET/raul#"
+</span>
+&lt;rdf:Description rdf:about="http://w3c.org.au/raul/service/public/forms/productAdd#submit"&gt;
+  &lt;rdf:type rdf:resource="http://purl.org/NET/raul#Button"&gt;&lt;/rdf:type&gt;
+  &lt;raul:command&gt;submitDataWrap()&lt;/raul:command&gt;	
+  &lt;raul:id&gt;Submit&lt;/raul:id&gt;
+  &lt;raul:name&gt;Submit&lt;/raul:name&gt;
+  &lt;raul:value&gt;Submit&lt;/raul:value&gt;
+&lt;/rdf:Description&gt;</code></pre>
+
+</article>
+
+<aside><h2>Try it out.</h2>
+
+<p>Check out our <a href="../demo/demo.html">demo</a> to learn how ActiveRaUL works.</p>
+<h2>Install it now.</h2>
+<p>Download the latest version of ActiveRaUL from our Google Code <a href="http://code.google.com/p/activeraul/">project</a>.</p></aside>
+
+	<footer>
+		<p><a href="about/authors.html">&copy; 2012 </a> &mdash; <a href="about/authors.html">About Authors</a></p>
+	</footer>
+
+</body>
+
+</html>

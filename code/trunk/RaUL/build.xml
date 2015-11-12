@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RaUL" basedir="." default="dist">
+  
+	<!-- CONSTANTS -->
+	<property name="PROJECT" value="raul"/>
+	<property name="CORE" value="core"/>
+	<property name="VERSION" value="0.1"/>
+	<property name="DEV" value="dev"/>
+	
+	<!-- DIRECTORIES -->
+	<property name="lib.dir" value="src/main/lib"/>  
+	<property name="dist.dir" value="dist"/>
+	<property name="build.dir" value="build"/>
+	<property name="src.dir" value="src/main/java"/>
+	<property name="webapp.dir" value="webapp"/>
+	<property name="webapps.libs" value="${webapp.dir}/libs" />
+	<property environment="env"/>
+	<property name="tomcat.manager" value="http://w3c-org-au.vm.csiro.au" />
+	<property name="tomcat.username" value="" />
+	<property name="tomcat.password" value="" />
+  
+  	<path id="classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+			<exclude name="${junit.jar}"/>
+		</fileset>
+		<pathelement path="${java.class.path}"/>
+	</path>
+  	
+	<target name="clean">
+		<tstamp />
+		<echo>Cleaning up</echo>
+		  		
+		<delete dir="${dist.dir}"/>
+		<delete dir="${webapp.dir}"/>
+		<delete dir="${build.dir}"/>
+	</target>
+	
+  	<target name="prepare">
+  		<echo>Preparing directories</echo>
+  		<mkdir dir="${build.dir}"/>
+  		<mkdir dir="${dist.dir}"/>
+  		<mkdir dir="${webapps.libs}"/>
+  	</target>
+	  
+	<target name="copy">
+    	<!--<copy file="src/hashing/ie/deri/urq/realidy/hashing/us/hash.dat" tofile="${build.dir}/ie/deri/urq/realidy/hashing/us/hash.dat"> </copy>
+    	<copy file="src/log4j.properties" tofile="${build.dir}/log4j.properties"> </copy>
+    	<copy file="src/hashing/ie/deri/urq/realidy/hashing/us/hash.ini" tofile="${build.dir}/ie/deri/urq/realidy/hashing/us/hash.ini"> </copy>-->
+  	</target>  
+			
+	<target name="dist" depends="prepare,copy">
+    	<javac destdir="${build.dir}"
+	   		srcdir="${src.dir}"
+	   		debug="yes">
+	      <classpath refid="classpath"/>
+    	</javac>
+		
+		<copy todir="${build.dir}">
+					<fileset dir="${src.dir}">
+						<include name="**/*.properties"/>
+					</fileset>
+		</copy>
+		
+		<jar jarfile="${dist.dir}/${PROJECT}-${DEV}.jar" basedir="${build.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="ie.deri.urq.lodq.cli.Main"/>
+      		</manifest>
+    	</jar>
+  	</target>
+  	
+  	<target name="war" depends="prepare,copy">
+    	<javac destdir="${build.dir}"
+	   		srcdir="${src.dir}"
+	   		debug="yes">
+	      <classpath refid="classpath"/>
+    	</javac>
+    	<!--
+    	<copy todir="${webapps.libs}" flatten="true">
+			<fileset dir=".">
+				<include name="${lib.dir}/*.jar"/>
+				<include name="${lib.dir}/**/*.jar"/>
+			</fileset>
+		</copy>
+  		-->
+  		<war destfile="${dist.dir}/ROOT.war" 
+     		webxml="src/main/resources/webapp/web.xml">
+                <webinf dir="${webapp.dir}/"  />
+                  <fileset dir="resources/"/>
+                  <classes dir="${build.dir}"/>
+                  <lib dir="${lib.dir}" />
+                </war>
+	</target>
+	
+	<!-- Abort the build if TOMCAT_HOME is not set -->
+	<target name="checkTomcatHome" unless="env.TOMCAT_HOME">
+	   <fail message="TOMCAT_HOME must be set!"/>
+	</target>
+
+	<!-- Deploy the WAR file to TOMCAT_HOME\webapps --> 
+	<target name="deploy" depends="checkTomcatHome,war">
+		<echo>Deploying to ${env.TOMCAT_HOME}</echo>
+	    <copy file="${dist.dir}/ROOT.war" todir="${env.TOMCAT_HOME}/webapps"/>
+	</target>
+	
+	<!--
+	<target name="deploy" depends="war">
+	    <deploy url="${tomcat.manager}"
+	        username="${tomcat.username}"
+	        password="${tomcat.password}"
+	        path="/${PROJECT}"
+	        update="true"
+	        war="${dist.dir}/${PROJECT}.war" />
+	</target>
+	-->
+</project>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:raul="http://purl.org/NET/raul#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:time="http://www.w3.org/2006/timezone"> 
+
+<head>	
+	<meta property="raul:title" content="Form Create/Delete/Get Test"/>
+	<title>Form Create/Delete/Get Test</title>
+    <link rel="stylesheet" href="css/raul.css" />
+    <link type="text/css" rel="Stylesheet" href="css/blackbird.css" />    
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.json-2.2.min.js"></script> 
+    <script type="text/javascript" src="js/jquery.rdfquery.core.min-1.0.js"></script> 
+    <script type="text/javascript" src="js/jquery.rdfquery.rdfa.min-1.0.js"></script> 
+    <script type="text/javascript" src="js/jquery.rdfquery.rules.min-1.0.js"></script> 
+    <script type="text/javascript" src="js/blackbird.js"></script> 
+    <script type="text/javascript" src="js/raul_post.js"></script> 
+    <script type="text/javascript" src="js/raul.js"></script>	
+</head> 
+
+<body> 
+	<div id="frame"> 
+		<div id="header"> 
+			<h1>RaUL</h1> 
+			<h2>Form Create/Delete/Get Test</h2> 
+		</div> 
+		
+		<div id="nav"> 
+			<ul> 
+				<li><a href="index.html">Home</a></li>
+				<li><a href="widgets.html">Widgets</a></li>
+				<li><a href="demo.html">Demo</a></li> 
+			</ul> 
+			<input id="logging" type="submit" name="logging" value="logging" />
+			<input id="show" type="submit" name="show" value="show" />
+		</div> 
+			
+		<div id="content">			
+			
+		</div>
+
+		<div id="form">			
+			<textarea rows="25" cols="45" id="formdef"></textarea><br/>						
+			Form URI <input type="text" id="delformuri" name="delformuri" />
+			<button type="button" id="formdelete">Delete a form</button><br/>
+			Form URI <input type="text" id="getformuri" name="getformuri" />
+			<button type="button" id="formget">Get a form</button><br/>
+			<button type="button" id="formcreate">Create a new form</button><br/>
+			<input type="hidden" id="postdatauri" name="postdatauri" />
+			<button type="button" id="datapost" disabled>Post data to a form</button>
+		</div>
+	</div> 
+</body>
+ 
+</html>
+

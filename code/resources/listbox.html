@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:raul="http://purl.org/NET/raul#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:time="http://www.w3.org/2006/timezone" xml:base="http://raul.deri.ie/forms/registration">
+
+<head>
+<style type="text/css">
+   li, ol { list-style-type:none; } 
+</style>
+    <meta about="#registerAccount" property="raul:title" content="Registration" />
+<title>Registration</title>
+<link rel="stylesheet" href="css/raul.css">
+<link type="text/css" rel="Stylesheet" href="css/blackbird.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.snippet.min.css" />
+
+<link type="text/css" rel="Stylesheet" href="css/blackbird.css" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.core.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rdfa.min-1.0.js"></script>
+<script type="text/javascript" src="js/jquery.rdfquery.rules.min-1.0.js"></script>
+<script type="text/javascript" src="js/blackbird.js"></script>
+<script type="text/javascript" src="js/jquery.snippet.min.js"> 
+</script>
+<script type="text/javascript">
+  $(document).ready( function() {
+            			    $("pre#test").snippet("html",{style:"dull"});
+
+      $('#submit').click(function() {
+                 var rdf = parseDom();
+                log.info(rdf.databank.dump({format:'application/rdf+xml', serialize: true}));
+                $("#frame").append("<div>"+rdf.databank.dump({format:'application/rdf+xml', serialize: true})+"</div>");
+                $.ajax({
+                                  type: 'POST',
+                                  url: 'http://www.example.com/books/',
+                                  processData: false,
+                                  contentType: 'application/rdf+xml',
+                                  data: rdf.dump('application/rdf+xml')
+                                });
+
+                return false;
+              });
+           $('#show').click(function() {
+                   log.info("show the parsed RDF")
+                   $("#result").find("tr:gt(0)").remove();
+                   var rdf = parseDom();
+
+                    $("#result").find("tr:gt(0)").remove();
+                          $('#result tr:last').after('<tr><td style="font: bold;">subject</td><td>predicate</td><td>object</td></tr>'); 
+                          rdf.where('?s ?p ?o')
+                        .each(function() {
+                            $('#result tr:last').after('<tr><td>'+this.s.value+'</td><td>'+this.p.value+'</td><td>'+this.o.value+'</td></tr>');
+                        });
+                     return false;
+                 });
+
+           $('#logging').click(function() {
+             log.toggle();
+           });
+       });
+</script>
+<script type="text/javascript" src="js/raul.js"></script>
+  
+</head>
+
+<body>
+    <div id="frame">
+        <div id="header">
+           <h1>RaUL</h1>
+        </div>
+         <div id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="widgets.html">Widgets</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    </ul>
+                      <input id="logging" type="submit" name="logging" value="logging"  />
+                    </div>
+        <div id="content_main">
+
+<form method="post" action="" id="register" >
+    <h3>Simple listbox widget</h3>
+    <hr>
+<span about="valuebirthday_day">
+<span property="rdf:subject" content="http://raul.deri.ie/forms/registerAccount#123"></span>
+<span property="rdf:predicate" content="time:day"></span>
+<span property="rdf:object" content=""></span>
+</span>
+</p>
+
+
+Birthday:
+ 
+										<span about="birthday_day" typeof="raul:Listbox">
+										    <span property="raul:id" datatype="xsd:string" content="birthday_day"></span>
+										    <span property="raul:name" datatype="xsd:string" content="birthday_day"></span>
+										    <span property="raul:value" content="valuebirthday_day"></span>
+										    <span property="raul:options" content="http://raul.deri.ie/forms/registration#birthday_day_options"></span>
+										</span>
+										
+										<ol about="http://raul.deri.ie/forms/registration#birthday_day_options" typeof="rdf:Seq">
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_1"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_2"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_3"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_4"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_5"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_6"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_7"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_8"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_9"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_10"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_11"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_12"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_13"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_14"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_15"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_16"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_17"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_18"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_19"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_20"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_21"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_22"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_23"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_24"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_25"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_26"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_27"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_28"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_29"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_30"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_31"/>
+        <li style="display:none;" rel="raul:options" resource="#birthday_day_32"/>
+      </ol>
+										<select id="birthday_day" name="birthday_day">
+										<option value="0">Day:</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+										<option value="30">30</option>
+										<option value="31">31</option>
+										</select>
+										
+										<span about="#birthday_day_1" typeof="raul:Listitem" property="raul:label" content="Day:" ><span property="raul:value" content="Day:"/></span>
+										<span about="#birthday_day_2" typeof="raul:Listitem" property="raul:label" content="1" ><span property="raul:value" content="1"/></span>
+										<span about="#birthday_day_3" typeof="raul:Listitem" property="raul:label" content="2" ><span property="raul:value" content="2"/></span>
+										<span about="#birthday_day_4" typeof="raul:Listitem"  property="raul:label" content="3" ><span property="raul:value" content="3"/></span>
+										<span about="#birthday_day_5" typeof="raul:Listitem" property="raul:label" content="4" ><span property="raul:value" content="4"/></span>
+										<span about="#birthday_day_6" typeof="raul:Listitem" property="raul:label" content="5" ><span property="raul:value" content="5"/></span>
+										<span about="#birthday_day_7" typeof="raul:Listitem" property="raul:label" content="6" ><span property="raul:value" content="6"/></span>
+										<span about="#birthday_day_8" typeof="raul:Listitem" property="raul:label" content="7" ><span property="raul:value" content="7"/></span>
+										<span about="#birthday_day_9" typeof="raul:Listitem" property="raul:label" content="8" ><span property="raul:value" content="8"/></span>
+										<span about="#birthday_day_10" typeof="raul:Listitem" property="raul:label" content="9" ><span property="raul:value" content="9"/></span>
+										<span about="#birthday_day_11" typeof="raul:Listitem" property="raul:label" content="10" ><span property="raul:value" content="10"/></span>
+										<span about="#birthday_day_12" typeof="raul:Listitem" property="raul:label" content="11" ><span property="raul:value" content="11"/></span>
+										<span about="#birthday_day_13" typeof="raul:Listitem" property="raul:label" content="12" ><span property="raul:value" content="12"/></span>
+										<span about="#birthday_day_14" typeof="raul:Listitem" property="raul:label" content="13" ><span property="raul:value" content="13"/></span>
+										<span about="#birthday_day_15" typeof="raul:Listitem" property="raul:label" content="14" ><span property="raul:value" content="14"/></span>
+										<span about="#birthday_day_16" typeof="raul:Listitem" property="raul:label" content="15" ><span property="raul:value" content="15"/></span>
+										<span about="#birthday_day_17" typeof="raul:Listitem" property="raul:label" content="16" ><span property="raul:value" content="16"/></span>
+										<span about="#birthday_day_18" typeof="raul:Listitem" property="raul:label" content="17" ><span property="raul:value" content="17"/></span>
+										<span about="#birthday_day_19" typeof="raul:Listitem" property="raul:label" content="18" ><span property="raul:value" content="18"/></span>
+										<span about="#birthday_day_20" typeof="raul:Listitem" property="raul:label" content="19" ><span property="raul:value" content="19"/></span>
+										<span about="#birthday_day_21" typeof="raul:Listitem" property="raul:label" content="20" ><span property="raul:value" content="20"/></span>
+										<span about="#birthday_day_22" typeof="raul:Listitem" property="raul:label" content="21" ><span property="raul:value" content="21"/></span>
+										<span about="#birthday_day_23" typeof="raul:Listitem" property="raul:label" content="22" ><span property="raul:value" content="22"/></span>								
+										<span about="#birthday_day_24" typeof="raul:Listitem" property="raul:label" content="23" ><span property="raul:value" content="23"/></span>
+										<span about="#birthday_day_25" typeof="raul:Listitem" property="raul:label" content="24" ><span property="raul:value" content="24"/></span>
+										<span about="#birthday_day_26" typeof="raul:Listitem" property="raul:label" content="25" ><span property="raul:value" content="25"/></span>
+										<span about="#birthday_day_27" typeof="raul:Listitem" property="raul:label" content="26" ><span property="raul:value" content="26"/></span>
+										<span about="#birthday_day_28" typeof="raul:Listitem" property="raul:label" content="27" ><span property="raul:value" content="27"/></span>
+										<span about="#birthday_day_29" typeof="raul:Listitem" property="raul:label" content="28" ><span property="raul:value" content="28"/></span>
+										<span about="#birthday_day_30" typeof="raul:Listitem" property="raul:label" content="29" ><span property="raul:value" content="29"/></span>
+										<span about="#birthday_day_31" typeof="raul:Listitem" property="raul:label" content="30" ><span property="raul:value" content="30"/></span>
+										<span about="#birthday_day_32" typeof="raul:Listitem"  property="raul:label" content="31" ><span property="raul:value" content="31"/></span>
+    <hr>
+                                    <h3>HTML template for textbox widget</h3>
+                                    <pre id="test">
+&lt;span about=&quot;birthday_day&quot; typeof=&quot;raul:Listbox&quot;&gt;
+    &lt;span property=&quot;raul:id&quot; datatype=&quot;xsd:string&quot; content=&quot;birthday_day&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;raul:name&quot; datatype=&quot;xsd:string&quot; content=&quot;birthday_day&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;raul:value&quot; content=&quot;valuebirthday_day&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;raul:options&quot; content=&quot;http://raul.deri.ie/forms/registration#birthday_day_options&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+
+&lt;ol about=&quot;http://raul.deri.ie/forms/registration#birthday_day_options&quot; typeof=&quot;rdf:Seq&quot;&gt;
+    &lt;li style=&quot;display:none;&quot; rel=&quot;raul:options&quot; resource=&quot;#birthday_day_1&quot;/&gt;
+    &lt;li style=&quot;display:none;&quot; rel=&quot;raul:options&quot; resource=&quot;#birthday_day_2&quot;/&gt;
+    ...
+    &lt;li style=&quot;display:none;&quot; rel=&quot;raul:options&quot; resource=&quot;#birthday_day_32&quot;/&gt;
+&lt;/ol&gt;
+&lt;select id=&quot;birthday_day&quot; name=&quot;birthday_day&quot;&gt;
+    &lt;option value=&quot;0&quot;&gt;Day:&lt;/option&gt;
+    &lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+    ...
+    &lt;option value=&quot;31&quot;&gt;31&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;span about=&quot;#birthday_day_1&quot; typeof=&quot;raul:Listitem&quot; property=&quot;raul:label&quot; content=&quot;Day:&quot; &gt;
+    &lt;span property=&quot;raul:value&quot; content=&quot;Day:&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;span about=&quot;#birthday_day_2&quot; typeof=&quot;raul:Listitem&quot; property=&quot;raul:label&quot; content=&quot;1&quot; &gt;
+    &lt;span property=&quot;raul:value&quot; content=&quot;1&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;
+....
+&lt;span about=&quot;#birthday_day_32&quot; typeof=&quot;raul:Listitem&quot;  property=&quot;raul:label&quot; content=&quot;31&quot; &gt;
+    &lt;span property=&quot;raul:value&quot; content=&quot;31&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;&nbsp;ch</pre>
+                                    <hr>
+                                    <h3>Specify semantics of widget value</h3>
+                                    <pre id="test">
+&lt;span about=&quot;valuebirthday_day&quot;&gt;
+    &lt;span property=&quot;rdf:subject&quot; content=&quot;http://raul.deri.ie/forms/registerAccount#123&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;rdf:predicate&quot; content=&quot;time:day&quot;&gt;&lt;/span&gt;
+    &lt;span property=&quot;rdf:object&quot; content=&quot;&quot;&gt;&lt;/span&gt;
+&lt;/span&gt;</pre>
+
+                                    <br /><br />
+                                    <input id="show" type="submit" name="show" value="show"  /><input id="submit" type="submit" name="submit" value="submit"  />
+</form>		
+<table id="result">
+    <tr><td>s</td><td>p</td><td>o</td></tr>
+</table>
+
+    </div>
+    <div id="footer">
+&nbsp;
+    </div>
+</div>    
+
+</body>
+</html>
